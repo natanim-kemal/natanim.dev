@@ -41,6 +41,9 @@
   /* Layout */
   --max-width: 1200px;
   --navbar-height: 64px;
+
+  /* Icons */
+  --icon-filter: brightness(0) saturate(100%);
 }
 
 /* Dark Theme */
@@ -61,6 +64,9 @@
 
   --shadow-navbar: 0 4px 12px rgba(0, 0, 0, 0.3);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+
+  /* Icons */
+  --icon-filter: brightness(0) saturate(100%) invert(1);
 }
 
 @theme inline {

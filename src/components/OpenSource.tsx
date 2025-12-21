@@ -129,17 +129,6 @@ export default function OpenSource() {
                                 </div>
                             </div>
 
-                            {/* Decorative Divider with + icons */}
-                            <div className="absolute bottom-0 left-0 right-0 h-px flex items-center">
-                                <div className="flex-1 h-px" style={{ backgroundColor: 'rgb(211, 211, 211)' }} />
-                                <div className="px-2">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(20, 20, 20, 0.15)" strokeWidth="1.5" strokeLinecap="round">
-                                        <path d="M12 5L12 19M5 12L19 12" />
-                                    </svg>
-                                </div>
-                                <div className="flex-1 h-px" style={{ backgroundColor: 'rgb(211, 211, 211)' }} />
-                            </div>
-
                             {/* Corner decorations */}
                             <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: 'var(--text-muted)' }}>

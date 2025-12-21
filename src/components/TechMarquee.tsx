@@ -38,14 +38,14 @@ function MarqueeRow({ items, reverse = false }: { items: typeof techStack; rever
                 {/* First set */}
                 {items.map((tech, index) => (
                     <div key={`first-${index}`} className="marquee-item">
-                        <img src={tech.icon} alt={tech.name} className="w-6 h-6 md:w-8 md:h-8 dark:invert" />
+                        <img src={tech.icon} alt={tech.name} className="w-6 h-6 md:w-8 md:h-8" style={{ filter: 'var(--icon-filter)' }} />
                         <span className="text-sm md:text-base" style={{ color: 'var(--text-primary)' }}>{tech.name}</span>
                     </div>
                 ))}
                 {/* Duplicate set */}
                 {items.map((tech, index) => (
                     <div key={`second-${index}`} className="marquee-item">
-                        <img src={tech.icon} alt={tech.name} className="w-6 h-6 md:w-8 md:h-8 dark:invert" />
+                        <img src={tech.icon} alt={tech.name} className="w-6 h-6 md:w-8 md:h-8" style={{ filter: 'var(--icon-filter)' }} />
                         <span className="text-sm md:text-base" style={{ color: 'var(--text-primary)' }}>{tech.name}</span>
                     </div>
                 ))}
