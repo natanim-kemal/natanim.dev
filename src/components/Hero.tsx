@@ -55,7 +55,7 @@ export default function Hero() {
                             className="text-lg sm:text-xl max-w-lg mx-auto lg:mx-0"
                             style={{ color: 'var(--text-secondary)' }}
                         >
-                            I'm Natanim, a full-stack developer passionate about crafting
+                            I'm Natanim, a creative software engineer & developer passionate about crafting
                             beautiful, functional, and user-centered digital experiences.
                         </p>
 
@@ -327,7 +327,7 @@ export default function Hero() {
                                 color: 'var(--text-primary)'
                             }}
                         >
-                            👋 Hello!
+                            <span style={{ filter: 'grayscale(1)' }}>👋</span> Hello!
                         </div>
                     </div>
                 </div>

@@ -10,15 +10,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Natanim | Full-Stack Developer",
-  description: "Building digital experiences that matter. Full-stack developer passionate about crafting beautiful, functional, and user-centered digital experiences.",
-  keywords: ["developer", "full-stack", "react", "next.js", "typescript", "portfolio"],
-  authors: [{ name: "Natanim Abesha" }],
+  title: "Natanim | SWE",
+  description: "Building digital experiences that matter. Full-stack software engineer passionate about crafting beautiful, functional, and user-centered digital experiences.",
+  keywords: ["software engineer", "full-stack", "react", "next.js", "typescript", "portfolio"],
+  authors: [{ name: "Natanim Kemal" }],
   icons: {
     icon: "/favicon.png",
   },
   openGraph: {
-    title: "Natanim Abesha | Full-Stack Developer",
+    title: "Natanim Kemal | SWE",
     description: "Building digital experiences that matter.",
     type: "website",
   },

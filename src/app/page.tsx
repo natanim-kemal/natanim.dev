@@ -13,7 +13,7 @@ export default function Home() {
       {/* Decorative Grid Background - z-index 0, behind everything */}
       <GridBackground />
 
-      {/* Navigation - z-index 50 (in Navbar component) */}
+      {/* Navigation */}
       <Navbar />
 
       {/* Content wrapper - z-index 1, above grid */}
