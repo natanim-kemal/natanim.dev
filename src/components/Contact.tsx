@@ -52,16 +52,42 @@ export default function Contact() {
         message: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsSubmitting(false);
-        setIsSubmitted(true);
-        setTimeout(() => setIsSubmitted(false), 3000);
-        setFormState({ name: '', email: '', message: '' });
+        setError(null);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formState),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                // Show success state on the button
+                setIsSubmitting(false);
+                setIsSuccess(true);
+
+                // Reset form and success state after 3 seconds
+                setTimeout(() => {
+                    setIsSuccess(false);
+                    setFormState({ name: '', email: '', message: '' });
+                }, 3000);
+            } else {
+                setError(data.error || 'Something went wrong. Please try again.');
+                setIsSubmitting(false);
+            }
+        } catch (err) {
+            console.error('Form submission error:', err);
+            setError('Failed to send message. Please try again or contact me directly via email.');
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -295,14 +321,14 @@ export default function Contact() {
 
                             <button
                                 type="submit"
-                                disabled={isSubmitting}
+                                disabled={isSubmitting || isSuccess}
                                 className="w-full py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed relative overflow-hidden group"
                                 style={{
                                     backgroundColor: 'var(--text-primary)',
                                     color: 'var(--background-base)',
                                 }}
                             >
-                                <span className={`inline-flex items-center gap-2 transition-all duration-300 ${isSubmitting ? 'opacity-0' : 'opacity-100'}`}>
+                                <span className={`inline-flex items-center gap-2 transition-all duration-300 ${isSubmitting || isSuccess ? 'opacity-0' : 'opacity-100'}`}>
                                     Send message
                                     <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -316,14 +342,22 @@ export default function Contact() {
                                         </svg>
                                     </span>
                                 )}
+                                {isSuccess && (
+                                    <span className="absolute inset-0 flex items-center justify-center text-lg">
+                                        Thank you😊
+                                    </span>
+                                )}
                             </button>
 
-                            {isSubmitted && (
-                                <div className="flex items-center gap-2 text-green-600 animate-fade-in">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            {error && (
+                                <div className="flex items-start gap-2 p-4 rounded-xl animate-fade-in" style={{
+                                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                                    border: '1px solid rgba(239, 68, 68, 0.3)'
+                                }}>
+                                    <svg className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
-                                    <span className="text-sm font-medium">Message sent successfully!</span>
+                                    <span className="text-sm font-medium text-red-600">{error}</span>
                                 </div>
                             )}
                         </form>
