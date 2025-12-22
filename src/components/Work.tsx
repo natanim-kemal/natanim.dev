@@ -43,7 +43,7 @@ const featuredProjects = [
         tags: ['Python', 'Pandas', 'lua', 'Svelte', 'Tailwind'],
         image: '/placeholder.png',
         link: 'https://modintel.live',
-        github: 'htts://github.com/natanim-kemal/modintel'
+        github: 'https://github.com/natanim-kemal/modintel'
     },
     {
         id: 4,
