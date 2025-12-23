@@ -10,7 +10,7 @@ const featuredProjects = [
         description: 'A mobile and desktop app for syncing pdf files between devices. Built with flutter and supabase.',
         tags: ['Flutter', 'NestJS', 'PostgreSQL', 'AWS'],
         image: '/synce.jpg',
-        link: 'https://synce.website',
+        link: 'https://synce.natanim.dev',
         github: 'https://github.com/natanim-kemal/synce'
     },
     {
@@ -42,7 +42,7 @@ const featuredProjects = [
         ),
         tags: ['Python', 'Pandas', 'lua', 'Svelte', 'Tailwind'],
         image: '/placeholder.png',
-        link: 'https://modintel.live',
+        link: 'https://modintel.natanim.dev',
         github: 'https://github.com/natanim-kemal/modintel'
     },
     {
@@ -61,7 +61,7 @@ const featuredProjects = [
         description: 'IoT monitoring dashboard with real-time threat detection and automated response system.',
         tags: ['TypeScript', 'Svelte', 'Tailwind'],
         image: '/neon-nexus.png',
-        link: 'https://neon.nexus.neon',
+        link: 'https://neon-nexus.natanim.dev',
         github: 'https://github.com/natanim-kemal/neon-nexus'
     },
     {
@@ -70,7 +70,7 @@ const featuredProjects = [
         description: 'Minimalist productivity application focusing on deep work sessions and flow state.',
         tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Supabase'],
         image: '/zentask.png',
-        link: 'https://zentask.app',
+        link: 'https://zentask.natanim.dev',
         github: 'https://github.com/natanim-kemal/zentask'
     },
 ];
