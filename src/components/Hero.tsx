@@ -172,7 +172,7 @@ export default function Hero() {
 
                             {/* Tech Stack Pills */}
                             <div className="flex flex-wrap gap-1 mb-6">
-                                {['Backend', 'cybersecurity', 'Ai automation', 'DevOps', 'Blockchain'].map((tech) => (
+                                {['Backend', 'Cybersecurity', 'Ai automation', 'DevOps', 'Blockchain'].map((tech) => (
                                     <span
                                         key={tech}
                                         className="px-3 py-1.5 rounded-full text-sm font-medium"

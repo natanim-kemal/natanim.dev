@@ -122,7 +122,7 @@ export default function About() {
                                 <span className="text-sm" style={{ color: 'var(--text-primary)' }}>✦</span>
                                 <div>
                                     <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                                        Security Certified by Google
+                                        Google Security Certified
                                     </p>
                                 </div>
                             </div>
