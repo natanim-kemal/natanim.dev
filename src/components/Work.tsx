@@ -48,7 +48,7 @@ const featuredProjects = [
     {
         id: 4,
         title: '🌀',
-        description: 'Modern, asthetic, responsive portfolio website built with Next.js 16, Tailwind CSS, and TypeScript for myself.',
+        description: 'Modern, aesthetic, responsive portfolio website built with Next.js 16, Tailwind CSS, and TypeScript for myself.',
         tags: ['TypeScript', 'NextJS', 'Tailwind'],
         image: '/portfolio.png',
         link: '#',

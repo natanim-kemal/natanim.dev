@@ -165,7 +165,7 @@ export default function Hero() {
                                         className="text-sm"
                                         style={{ color: 'var(--text-secondary)' }}
                                     >
-                                        sofware engineer
+                                        software engineer
                                     </p>
                                 </div>
                             </div>
