@@ -153,17 +153,6 @@ export default function About() {
                         <div className="space-y-5">
                             <div className="border-l-2 pl-4" style={{ borderColor: 'var(--grid-line)' }}>
                                 <p className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-                                    Software Engineer
-                                </p>
-                                <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                                    TechCorp Inc. • 2024 - 2025 • Remote
-                                </p>
-                                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>
-                                    Full-stack development, system architecture
-                                </p>
-                            </div>
-                            <div className="border-l-2 pl-4" style={{ borderColor: 'var(--grid-line)' }}>
-                                <p className="font-semibold" style={{ color: 'var(--text-primary)' }}>
                                     Cybersecurity Intern
                                 </p>
                                 <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
