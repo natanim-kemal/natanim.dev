@@ -59,14 +59,15 @@ export default function About() {
                                 me learning the next big thing.
                             </p>
                             <p>
-                                I contribute to open-source too! <span className="font-medium" style={{ color: 'var(--text-primary)' }}>vike.dev</span>,
-                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}> solid-sonner</span>,
-                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}> create-spring</span>.
-                                I author some of my own libraries as well:
-                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}> bagon-hooks</span>,
-                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}> solid-number-flow</span>,
-                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}> vike-metadata</span>,
-                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}> tsdot</span>.
+                                I contribute to open-source too!{' '}
+                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}>vike.dev</span>,{' '}
+                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}>solid-sonner</span>,{' '}
+                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}>create-spring</span>.
+                                I author some of my own libraries as well:{' '}
+                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}>bagon-hooks</span>,{' '}
+                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}>solid-number-flow</span>,{' '}
+                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}>vike-metadata</span>,{' '}
+                                <span className="font-medium" style={{ color: 'var(--text-primary)' }}>tsdot</span>.
                             </p>
 
                         </div>
