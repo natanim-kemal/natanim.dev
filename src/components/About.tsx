@@ -68,10 +68,7 @@ export default function About() {
                                 <span className="font-medium" style={{ color: 'var(--text-primary)' }}> vike-metadata</span>,
                                 <span className="font-medium" style={{ color: 'var(--text-primary)' }}> tsdot</span>.
                             </p>
-                            <p>
-                                Outside of coding, I like to travel <span className="emoji-bw">✈️</span>, workout <span className="emoji-bw">🏋️‍♂️</span>, go for runs <span className="emoji-bw">🏃</span>,
-                                and filming everyday life with my phone <span className="emoji-bw">📱</span>
-                            </p>
+
                         </div>
                     </div>
 
