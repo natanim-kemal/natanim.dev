@@ -7,7 +7,7 @@ const featuredProjects = [
     {
         id: 1,
         title: 'synce',
-        description: 'A mobile and desktop app for syncing pdf files between devices. Built with flutter and supabase.',
+        description: 'A mobile and desktop app for syncing pdf files between devices. Built with flutter and NestJs.',
         tags: ['Flutter', 'NestJS', 'PostgreSQL', 'AWS'],
         image: '/synce.jpg',
         link: 'https://synce.natanim.dev',
