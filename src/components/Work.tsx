@@ -41,7 +41,7 @@ const featuredProjects = [
             </>
         ),
         tags: ['Python', 'Pandas', 'lua', 'Svelte', 'Tailwind'],
-        image: '/placeholder.png',
+        image: '/modintel.png',
         link: 'https://modintel.natanim.dev',
         github: 'https://github.com/natanim-kemal/modintel'
     },
@@ -90,9 +90,14 @@ const miniProjects = [
 
 export default function Work() {
     const [activeCard, setActiveCard] = React.useState<number | null>(null);
+    const [activeFeaturedCard, setActiveFeaturedCard] = React.useState<number | null>(null);
 
     const handleCardClick = (index: number) => {
         setActiveCard(activeCard === index ? null : index);
+    };
+
+    const handleFeaturedCardClick = (id: number) => {
+        setActiveFeaturedCard(activeFeaturedCard === id ? null : id);
     };
 
     return (
@@ -119,7 +124,8 @@ export default function Work() {
                     {featuredProjects.map((project) => (
                         <div
                             key={project.id}
-                            className="group rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                            onClick={() => handleFeaturedCardClick(project.id)}
+                            className={`group rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer ${activeFeaturedCard === project.id ? 'is-active' : ''}`}
                             style={{
                                 backgroundColor: 'var(--background-surface)',
                                 boxShadow: 'var(--shadow-card)'
@@ -130,7 +136,7 @@ export default function Work() {
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110"
+                                    className={`w-full h-full object-cover transition-transform duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110 ${activeFeaturedCard === project.id ? 'grayscale-0 scale-110' : ''}`}
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                             </div>
@@ -177,14 +183,14 @@ export default function Work() {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                             </svg>
                                             <span className="relative inline-block">
-                                                <span className="transition-opacity duration-300 group-hover/link:opacity-0">
+                                                <span className={`transition-opacity duration-300 group-hover/link:opacity-0 ${activeFeaturedCard === 4 ? 'opacity-0' : ''}`}>
                                                     Live
                                                 </span>
-                                                <span className="absolute left-0 top-0 whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover/link:opacity-100">
+                                                <span className={`absolute left-0 top-0 whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover/link:opacity-100 ${activeFeaturedCard === 4 ? 'opacity-100' : ''}`}>
                                                     You&apos;re already there
                                                 </span>
-                                                {/* Invisible spacer to reserve width on hover */}
-                                                <span className="hidden group-hover/link:inline opacity-0 whitespace-nowrap" aria-hidden="true">
+                                                {/* Invisible spacer to reserve width on hover/tap */}
+                                                <span className={`hidden group-hover/link:inline opacity-0 whitespace-nowrap ${activeFeaturedCard === 4 ? 'inline' : ''}`} aria-hidden="true">
                                                     You&apos;re already there
                                                 </span>
                                             </span>
@@ -300,6 +306,6 @@ export default function Work() {
                     ))}
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
