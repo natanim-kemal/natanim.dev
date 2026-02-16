@@ -84,13 +84,7 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-/* Desktop: zoom out to 85% for better visuals */
-@media (min-width: 1024px) {
-  html {
-    zoom: 0.85;
-  }
+  zoom: 0.8;
 }
 
 body {
