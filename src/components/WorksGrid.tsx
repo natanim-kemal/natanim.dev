@@ -14,7 +14,7 @@ export default function WorksGrid() {
     return (
         <section className="py-16" style={{ backgroundColor: 'var(--background-base)' }}>
             <div className="max-w-[1200px] mx-auto px-6">
-                {/* Section Header */}
+
                 <div className="text-center mb-12">
                     <h2
                         className="text-3xl md:text-4xl font-bold mb-4"
@@ -30,9 +30,9 @@ export default function WorksGrid() {
                     </p>
                 </div>
 
-                {/* Masonry Grid */}
+
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[180px]">
-                    {/* Item 1 - Tall */}
+
                     <div className="group relative overflow-hidden rounded-2xl row-span-2 cursor-pointer">
                         <img
                             src="/feature-1.jpg"
@@ -45,7 +45,7 @@ export default function WorksGrid() {
                         </div>
                     </div>
 
-                    {/* Item 2 - Normal */}
+
                     <div className="group relative overflow-hidden rounded-2xl cursor-pointer">
                         <img
                             src="/feature-2.jpg"
@@ -58,7 +58,7 @@ export default function WorksGrid() {
                         </div>
                     </div>
 
-                    {/* Item 3 - Wide (spans 2 cols) */}
+
                     <div className="group relative overflow-hidden rounded-2xl col-span-2 cursor-pointer">
                         <img
                             src="/feature-3.jpg"
@@ -71,7 +71,7 @@ export default function WorksGrid() {
                         </div>
                     </div>
 
-                    {/* Item 4 - Normal */}
+
                     <div className="group relative overflow-hidden rounded-2xl cursor-pointer">
                         <img
                             src="/feature-4.jpg"
@@ -84,7 +84,7 @@ export default function WorksGrid() {
                         </div>
                     </div>
 
-                    {/* Item 5 - Tall */}
+
                     <div className="group relative overflow-hidden rounded-2xl row-span-2 cursor-pointer">
                         <img
                             src="/feature-5.jpg"
@@ -97,7 +97,7 @@ export default function WorksGrid() {
                         </div>
                     </div>
 
-                    {/* Duplicate some for fuller grid */}
+
                     <div className="group relative overflow-hidden rounded-2xl col-span-2 cursor-pointer">
                         <img
                             src="/feature-1.jpg"
