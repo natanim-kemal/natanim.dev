@@ -70,11 +70,11 @@ export default function Contact() {
             const data = await response.json();
 
             if (response.ok) {
-                // Show success state on the button
+
                 setIsSubmitting(false);
                 setIsSuccess(true);
 
-                // Reset form and success state after 3 seconds
+
                 setTimeout(() => {
                     setIsSuccess(false);
                     setFormState({ name: '', email: '', message: '' });
@@ -92,9 +92,9 @@ export default function Contact() {
 
     return (
         <section id="contact" className="pt-24 pb-12 relative overflow-hidden" style={{ backgroundColor: 'var(--background-base)' }}>
-            {/* Animated Background Elements */}
+
             <div className="absolute inset-0 pointer-events-none">
-                {/* Floating circles */}
+
                 <div
                     className="absolute w-72 h-72 rounded-full opacity-[0.03] animate-float"
                     style={{
@@ -125,7 +125,7 @@ export default function Contact() {
             </div>
 
             <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-                {/* Section Header */}
+
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 animate-pulse-slow"
                         style={{
@@ -153,9 +153,9 @@ export default function Contact() {
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-                    {/* Left Side - Contact Info */}
+
                     <div className="space-y-8">
-                        {/* Email Card */}
+
                         <a
                             href="mailto:reachnatanim@gmail.com"
                             className="group block p-6 rounded-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1"
@@ -189,7 +189,7 @@ export default function Contact() {
                             </div>
                         </a>
 
-                        {/* Social Links */}
+
                         <div>
                             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4" style={{ color: 'var(--text-muted)' }}>
                                 Connect with me
@@ -229,7 +229,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        {/* Location */}
+
                         <div
                             className="p-5 rounded-xl flex items-center gap-4"
                             style={{
@@ -249,7 +249,7 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    {/* Right Side - Contact Form */}
+
                     <div
                         className="p-8 rounded-2xl"
                         style={{
@@ -364,9 +364,9 @@ export default function Contact() {
                     </div>
                 </div>
 
-                {/* Footer */}
+
                 <div className="mt-24 pt-12 border-t text-center" style={{ borderColor: 'var(--grid-line)' }}>
-                    {/* Big Logo */}
+
                     <div
                         className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight"
                         style={{ color: 'var(--text-primary)' }}
@@ -374,7 +374,7 @@ export default function Contact() {
                         <span className="mr-2">✦</span>natanim
                     </div>
 
-                    {/* Copyright & Credits */}
+
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
                             © 2026 Natanim. Built with Next.js & Tailwind CSS by natanim
