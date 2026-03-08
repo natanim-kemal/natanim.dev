@@ -17,7 +17,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     useEffect(() => {
         setMounted(true);
-        // Check localStorage first, then system preference
+
         const savedTheme = localStorage.getItem('theme') as Theme | null;
         if (savedTheme) {
             setTheme(savedTheme);
@@ -29,7 +29,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     useEffect(() => {
         if (!mounted) return;
 
-        // Apply theme to document
+
         const root = document.documentElement;
         if (theme === 'dark') {
             root.classList.add('dark');
@@ -37,7 +37,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             root.classList.remove('dark');
         }
 
-        // Save to localStorage
+
         localStorage.setItem('theme', theme);
     }, [theme, mounted]);
 
@@ -45,7 +45,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         setTheme(prev => prev === 'light' ? 'dark' : 'light');
     };
 
-    // Always provide context, even before mount
+
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             {children}
