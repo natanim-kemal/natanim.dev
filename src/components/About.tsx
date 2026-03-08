@@ -6,7 +6,7 @@ export default function About() {
     return (
         <section id="about" className="py-24" style={{ backgroundColor: 'var(--background-base)' }}>
             <div className="max-w-[1200px] mx-auto px-6">
-                {/* Section Header */}
+
                 <div className="text-center mb-16">
                     <h2
                         className="text-3xl md:text-4xl font-bold mb-6"
@@ -32,9 +32,9 @@ export default function About() {
                     </p>
                 </div>
 
-                {/* Three Cards */}
+
                 <div className="grid md:grid-cols-3 gap-6">
-                    {/* Card 1 - Intro */}
+
                     <div
                         className="rounded-2xl p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                         style={{
@@ -73,7 +73,7 @@ export default function About() {
                         </div>
                     </div>
 
-                    {/* Card 2 - Education */}
+
                     <div
                         className="rounded-2xl p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                         style={{
@@ -135,7 +135,7 @@ export default function About() {
                         </div>
                     </div>
 
-                    {/* Card 3 - Work Experience */}
+
                     <div
                         className="rounded-2xl p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                         style={{
