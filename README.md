@@ -25,7 +25,7 @@ src/
 │   ├── layout.tsx       # Root layout with ThemeProvider
 │   └── page.tsx         # Main page component
 ├── components/
-│   ├── Navbar.tsx       # Navigation 
+│   ├── Navbar.tsx       # Navigation
 │   ├── Hero.tsx         # Hero section
 │   ├── TechMarquee.tsx  # Animated tech stack
 │   ├── About.tsx        # About section
