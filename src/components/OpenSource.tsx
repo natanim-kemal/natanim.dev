@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-// Open source contributions data
+
 const contributions = [
     {
         quote: "Contributed to the Vike ecosystem by building essential plugins and documentation improvements.",
@@ -52,7 +52,7 @@ export default function OpenSource() {
     return (
         <section id="opensource" className="py-24" style={{ backgroundColor: 'var(--background-base)' }}>
             <div className="max-w-[1200px] mx-auto px-6">
-                {/* Section Header */}
+
                 <div className="text-center mb-16">
                     <h2
                         className="text-3xl md:text-4xl font-bold mb-4"
@@ -68,7 +68,7 @@ export default function OpenSource() {
                     </p>
                 </div>
 
-                {/* Contributions Grid */}
+
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {contributions.map((contribution, index) => (
                         <a
@@ -82,9 +82,9 @@ export default function OpenSource() {
                                 boxShadow: 'rgba(19, 19, 22, 0.7) 0px 1px 5px -4px, rgba(34, 42, 53, 0.08) 0px 0px 0px 1px, rgba(34, 42, 53, 0.05) 0px 4px 8px 0px',
                             }}
                         >
-                            {/* Card Content */}
+
                             <div className="p-6">
-                                {/* Quote */}
+
                                 <p
                                     className="text-sm leading-relaxed mb-6"
                                     style={{ color: 'var(--text-secondary)' }}
@@ -92,9 +92,9 @@ export default function OpenSource() {
                                     &ldquo;{contribution.quote}&rdquo;
                                 </p>
 
-                                {/* Project Info */}
+
                                 <div className="flex items-center gap-3">
-                                    {/* Project Logo */}
+
                                     <div
                                         className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden"
                                         style={{
@@ -111,7 +111,7 @@ export default function OpenSource() {
                                         />
                                     </div>
 
-                                    {/* Project Name & Role */}
+
                                     <div>
                                         <p
                                             className="font-medium text-sm"
@@ -129,7 +129,7 @@ export default function OpenSource() {
                                 </div>
                             </div>
 
-                            {/* Corner decorations */}
+
                             <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: 'var(--text-muted)' }}>
                                     <path d="M7 17L17 7M17 7H7M17 7V17" strokeLinecap="round" strokeLinejoin="round" />
@@ -139,7 +139,7 @@ export default function OpenSource() {
                     ))}
                 </div>
 
-                {/* GitHub Stats / CTA */}
+
                 <div className="mt-16 text-center">
                     <a
                         href="https://github.com/natanim-kemal"
