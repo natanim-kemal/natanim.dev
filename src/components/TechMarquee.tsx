@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-// Tech stack with Simple Icons CDN URLs - all in black
+
 const techStack = [
     { name: 'Python', icon: 'https://cdn.simpleicons.org/python/000000' },
     { name: 'Java', icon: 'https://cdn.simpleicons.org/openjdk/000000' },
@@ -22,11 +22,11 @@ const techStack = [
     { name: 'Svelte', icon: 'https://cdn.simpleicons.org/svelte/000000' },
 ];
 
-// Split into rows
+
 const row1 = techStack.slice(0, 8);
 const row2 = techStack.slice(8, 16);
 
-// Mobile rows (3 rows)
+
 const mobileRow1 = techStack.slice(0, 6);
 const mobileRow2 = techStack.slice(6, 11);
 const mobileRow3 = techStack.slice(11, 16);
@@ -35,14 +35,14 @@ function MarqueeRow({ items, reverse = false }: { items: typeof techStack; rever
     return (
         <div className="marquee-wrapper">
             <div className={`marquee-content ${reverse ? 'marquee-reverse' : ''}`}>
-                {/* First set */}
+
                 {items.map((tech, index) => (
                     <div key={`first-${index}`} className="marquee-item">
                         <img src={tech.icon} alt={tech.name} className="w-6 h-6 md:w-8 md:h-8" style={{ filter: 'var(--icon-filter)' }} />
                         <span className="text-sm md:text-base" style={{ color: 'var(--text-primary)' }}>{tech.name}</span>
                     </div>
                 ))}
-                {/* Duplicate set */}
+
                 {items.map((tech, index) => (
                     <div key={`second-${index}`} className="marquee-item">
                         <img src={tech.icon} alt={tech.name} className="w-6 h-6 md:w-8 md:h-8" style={{ filter: 'var(--icon-filter)' }} />
@@ -58,7 +58,7 @@ export default function TechMarquee() {
     return (
         <section className="py-8 md:py-12" style={{ backgroundColor: 'var(--background-base)' }}>
             <div className="max-w-[1200px] mx-auto relative overflow-hidden">
-                {/* Fade gradients */}
+
                 <div
                     className="absolute left-0 top-0 bottom-0 w-16 md:w-32 z-10 pointer-events-none"
                     style={{ background: 'linear-gradient(to right, var(--background-base), transparent)' }}
@@ -68,13 +68,13 @@ export default function TechMarquee() {
                     style={{ background: 'linear-gradient(to left, var(--background-base), transparent)' }}
                 />
 
-                {/* Desktop: Two rows moving opposite */}
+
                 <div className="hidden md:block space-y-4">
                     <MarqueeRow items={row1} />
                     <MarqueeRow items={row2} reverse />
                 </div>
 
-                {/* Mobile: Three rows */}
+
                 <div className="md:hidden space-y-3">
                     <MarqueeRow items={mobileRow1} />
                     <MarqueeRow items={mobileRow2} reverse />
