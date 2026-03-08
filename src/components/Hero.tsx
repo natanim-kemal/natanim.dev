@@ -6,7 +6,7 @@ export default function Hero() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        // Trigger animation after component mounts
+
         setIsVisible(true);
     }, []);
 
@@ -17,7 +17,7 @@ export default function Hero() {
         >
             <div className="container relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                    {/* Left Column - Text Content */}
+
                     <div
                         className={`
               space-y-8 text-center lg:text-left
@@ -25,7 +25,7 @@ export default function Hero() {
               ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
             `}
                     >
-                        {/* Eyebrow/Tag */}
+
                         <div
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium"
                             style={{
@@ -38,7 +38,7 @@ export default function Hero() {
                             Available for work
                         </div>
 
-                        {/* Main Headline */}
+
                         <h1
                             className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight"
                             style={{ color: 'var(--text-primary)' }}
@@ -50,7 +50,7 @@ export default function Hero() {
                             <span style={{ color: 'var(--text-secondary)' }}>matter.</span>
                         </h1>
 
-                        {/* Subheadline */}
+
                         <p
                             className="text-lg sm:text-xl max-w-lg mx-auto lg:mx-0"
                             style={{ color: 'var(--text-secondary)' }}
