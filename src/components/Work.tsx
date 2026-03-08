@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-// Top 6 featured projects - larger cards
+
 const featuredProjects = [
     {
         id: 1,
@@ -75,7 +75,7 @@ const featuredProjects = [
     },
 ];
 
-// Mini projects grid - 3x3 = 9 items
+
 const miniProjects = [
     { title: 'bagon-hooks', description: 'React hooks library for common use cases', icon: '🪝' },
     { title: 'solid-number-flow', description: 'Animated number transitions for Solid.js', icon: '🔢' },
@@ -103,7 +103,7 @@ export default function Work() {
     return (
         <section id="work" className="py-24" style={{ backgroundColor: 'var(--background-base)' }}>
             <div className="max-w-[1200px] mx-auto px-6">
-                {/* Section Header */}
+
                 <div className="text-center mb-16">
                     <h2
                         className="text-3xl md:text-4xl font-bold mb-4"
@@ -119,7 +119,7 @@ export default function Work() {
                     </p>
                 </div>
 
-                {/* Featured Projects - 6 larger cards */}
+
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
                     {featuredProjects.map((project) => (
                         <div
@@ -131,7 +131,7 @@ export default function Work() {
                                 boxShadow: 'var(--shadow-card)'
                             }}
                         >
-                            {/* Project Image */}
+
                             <div className="relative h-48 overflow-hidden">
                                 <img
                                     src={project.image}
@@ -141,7 +141,7 @@ export default function Work() {
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                             </div>
 
-                            {/* Project Content */}
+
                             <div className="p-6">
                                 <h3
                                     className={`text-lg font-bold mb-2 ${project.id === 4 ? 'grayscale group-hover:grayscale-0 transition-all duration-300' : ''}`}
@@ -156,7 +156,7 @@ export default function Work() {
                                     {project.description}
                                 </p>
 
-                                {/* Tags */}
+
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.tags.map((tag, index) => (
                                         <span
@@ -172,7 +172,7 @@ export default function Work() {
                                     ))}
                                 </div>
 
-                                {/* Links */}
+
                                 <div className="flex gap-3">
                                     {project.id === 4 ? (
                                         <div
@@ -189,7 +189,7 @@ export default function Work() {
                                                 <span className={`absolute left-0 top-0 whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover/link:opacity-100 ${activeFeaturedCard === 4 ? 'opacity-100' : ''}`}>
                                                     You&apos;re already there
                                                 </span>
-                                                {/* Invisible spacer to reserve width on hover/tap */}
+
                                                 <span className={`hidden group-hover/link:inline opacity-0 whitespace-nowrap ${activeFeaturedCard === 4 ? 'inline' : ''}`} aria-hidden="true">
                                                     You&apos;re already there
                                                 </span>
@@ -227,7 +227,7 @@ export default function Work() {
                     ))}
                 </div>
 
-                {/* Other Mini Projects Section - Header stays in container */}
+
                 <div className="text-center mb-12">
                     <h3
                         className="text-2xl md:text-3xl font-bold mb-3"
@@ -238,7 +238,7 @@ export default function Work() {
                 </div>
             </div>
 
-            {/* Mini Projects Grid */}
+
             <div className="w-full px-4 md:px-8">
                 <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-[900px] mx-auto">
                     {miniProjects.map((project, index) => (
@@ -252,7 +252,7 @@ export default function Work() {
                                 boxShadow: 'rgba(36, 36, 36, 0.7) 0px 1px 5px -4px, rgba(36, 36, 36, 0.05) 0px 4px 8px 0px',
                             }}
                         >
-                            {/* Icon Wrapper */}
+
                             <div
                                 className={`relative w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 rounded-xl flex items-center justify-center overflow-hidden transition-opacity duration-300 md:group-hover:opacity-0 ${activeCard === index ? 'opacity-0' : ''}`}
                                 style={{
@@ -260,17 +260,17 @@ export default function Work() {
                                     boxShadow: 'rgba(19, 19, 22, 0.698) 0px 1px 5px -4px, rgba(34, 42, 53, 0.1) 0px 0px 0px 1px, rgba(34, 42, 53, 0.05) 0px 4px 8px 0px',
                                 }}
                             >
-                                {/* Icon */}
+
                                 <span className="text-xl md:text-2xl emoji-bw z-10">{project.icon}</span>
 
-                                {/* Decorative lines */}
+
                                 <div className="absolute bottom-1.5 left-1.5 right-1.5 flex flex-col gap-1">
                                     <div className="h-1 rounded-full" style={{ backgroundColor: 'rgb(224, 224, 224)', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 1.9px 0px inset' }} />
                                     <div className="h-1 w-3/4 rounded-full" style={{ backgroundColor: 'rgb(224, 224, 224)', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 1.9px 0px inset' }} />
                                 </div>
                             </div>
 
-                            {/* Title */}
+
                             <h4
                                 className={`font-semibold text-xs md:text-sm text-center leading-tight transition-opacity duration-300 md:group-hover:opacity-0 ${activeCard === index ? 'opacity-0' : ''}`}
                                 style={{ color: 'var(--text-primary)' }}
@@ -278,7 +278,7 @@ export default function Work() {
                                 {project.title}
                             </h4>
 
-                            {/* Hover Overlay */}
+
                             <div
                                 className={`absolute inset-0 p-4 md:p-5 rounded-2xl flex flex-col items-center justify-center transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${activeCard === index ? 'opacity-100' : 'opacity-0'}`}
                                 style={{ backgroundColor: 'var(--background-surface)' }}
@@ -296,7 +296,7 @@ export default function Work() {
                                     {project.description}
                                 </p>
 
-                                {/* Decorative circles - one in each corner */}
+
                                 <div className="absolute top-3 left-3 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'rgb(224, 224, 224)', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 1.9px 0px inset' }} />
                                 <div className="absolute top-3 right-3 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'rgb(224, 224, 224)', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 1.9px 0px inset' }} />
                                 <div className="absolute bottom-3 left-3 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'rgb(224, 224, 224)', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 1.9px 0px inset' }} />
