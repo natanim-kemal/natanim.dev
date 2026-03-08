@@ -26,7 +26,7 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Close menu when clicking outside
+
     useEffect(() => {
         if (isMobileMenuOpen) {
             const handleClick = () => setIsMobileMenuOpen(false);
@@ -55,7 +55,7 @@ export default function Navbar() {
                         : 'transparent',
                 }}
             >
-                {/* Logo */}
+
                 <Link
                     href="/"
                     className="flex items-center gap-2 font-bold text-lg transition-colors hover:opacity-80"
@@ -65,16 +65,16 @@ export default function Navbar() {
                     <span>natanim</span>
                 </Link>
 
-                {/* Navigation Links - Desktop */}
+
                 <div className="hidden md:flex items-center gap-8">
                     {navItems.map((item) => (
                         <NavLink key={item.href} href={item.href}>{item.label}</NavLink>
                     ))}
                 </div>
 
-                {/* CTA Button & Theme Toggle */}
+
                 <div className="flex items-center gap-3">
-                    {/* Theme Toggle Button */}
+
                     <button
                         onClick={toggleTheme}
                         className="p-2 rounded-lg transition-all duration-300 hover:bg-black/5 dark:hover:bg-white/10"
@@ -90,7 +90,7 @@ export default function Navbar() {
                             </svg>
                         )}
                     </button>
-                    {/* Mobile Menu Button */}
+
                     <button
                         className="md:hidden p-2 rounded-lg transition-colors hover:bg-black/5"
                         aria-label="Toggle menu"
@@ -113,7 +113,7 @@ export default function Navbar() {
                         )}
                     </button>
 
-                    {/* CTA Button - Desktop */}
+
                     <a
                         href="#contact"
                         className="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-200 hover:scale-[1.02]"
@@ -127,7 +127,7 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            {/* Mobile Menu Card */}
+
             <div
                 className={`
                     md:hidden fixed top-20 right-4 w-56
@@ -146,7 +146,7 @@ export default function Navbar() {
                         border: '1px solid var(--grid-line)'
                     }}
                 >
-                    {/* Menu Items */}
+
                     <div className="space-y-1">
                         {navItems.map((item) => (
                             <a
@@ -161,13 +161,13 @@ export default function Navbar() {
                         ))}
                     </div>
 
-                    {/* Divider */}
+
                     <div
                         className="my-3 h-px"
                         style={{ backgroundColor: 'var(--grid-line)' }}
                     />
 
-                    {/* CTA Button */}
+
                     <a
                         href="#contact"
                         className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm transition-all hover:scale-[1.02]"
