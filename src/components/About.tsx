@@ -112,7 +112,7 @@ export default function About() {
                                 <span className="text-sm" style={{ color: 'var(--text-primary)' }}>✦</span>
                                 <div>
                                     <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                                        <span className="font-bold text-lg" style={{ color: 'var(--text-primary)' }}>3.6</span> CGPA / 4
+                                        <span className="font-bold text-lg" style={{ color: 'var(--text-primary)' }}>3.65</span> CGPA / 4
                                     </p>
                                 </div>
                             </div>
