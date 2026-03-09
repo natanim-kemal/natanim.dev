@@ -98,7 +98,7 @@ export default function Hero() {
                                     className="text-2xl font-bold"
                                     style={{ color: 'var(--text-primary)' }}
                                 >
-                                    3+
+                                    4+
                                 </div>
                                 <div className="text-sm">Years Experience</div>
                             </div>
@@ -111,7 +111,7 @@ export default function Hero() {
                                     className="text-2xl font-bold"
                                     style={{ color: 'var(--text-primary)' }}
                                 >
-                                    30+
+                                    40+
                                 </div>
                                 <div className="text-sm">Projects Completed</div>
                             </div>
@@ -124,7 +124,7 @@ export default function Hero() {
                                     className="text-2xl font-bold"
                                     style={{ color: 'var(--text-primary)' }}
                                 >
-                                    15+
+                                    20+
                                 </div>
                                 <div className="text-sm">Happy Clients</div>
                             </div>
