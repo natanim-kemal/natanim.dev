@@ -7,7 +7,7 @@ type Status = 'idle' | 'sending' | 'success' | 'error';
 
 const field =
   'w-full rounded-lg border bg-background px-3 py-2 font-sans text-sm outline-none ring-ring transition-all placeholder:text-muted-foreground/60 focus:ring-2';
-const label = 'font-mono text-[10px] tracking-widest text-muted-foreground uppercase';
+const label = 'text-xs text-muted-foreground';
 
 // staggered entrance for the form rows
 const step = (ms: number) => ({
