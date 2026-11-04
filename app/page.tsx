@@ -233,7 +233,7 @@ export default function Home() {
 
         <Reveal delay={0.1} className="mt-7">
           <p className="max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Backend, security, and product engineering. I build the systems products run on:{' '}
+            Backend, security, and product engineer. I build the systems products run on:{' '}
             <span className="font-medium text-foreground">APIs, data, and defenses</span>, then ship
             the interface that makes them feel simple.
           </p>
