@@ -1,0 +1,71 @@
+---
+title: "Learning Go: a love letter to a boring decision"
+description: "I picked up Go recently, built real projects with it, and stopped fighting my language. This is not a tutorial, it is what the experience felt like."
+date: "2026-11-04"
+---
+
+I did not choose Go the way you choose a phone. I did not watch a keynote, or read a migration guide, or decide that my life needed a new stack. I chose it the way you end up choosing a jacket: it was already hanging there, and everything else I tried on that day felt like it was trying too hard.
+
+Months ago before I ever wrote a serious line of Go, my whole working life ran on Python and TypeScript. They were good servants. Python let me move fast, prototype, glue things. TypeScript let me build interfaces that felt alive. Together they covered almost everything I needed to do. But slowly I noticed a friction I could not name. My services were getting bigger, my requests were arriving faster, my processes kept working longer than they had any right to. The tools were fine. The languages were fine. The fit was not.
+
+That failure of fit is what pushed me toward Go. Not a technical argument — I am skipping those on purpose, this post is about what it felt like — but a feeling argument. I wanted something smaller, stiffer, more opinionated. Something that would not let me write clever code and then have to maintain it later like it was a riddle I set for myself.
+
+## The first week was humbling
+
+Go has a reputation, and it is earned. People warn you that it is limited, that it has no classes, that error handling is repetitive, that the standard library is "boring." Some of that is true. But the thing nobody warns you about is how quiet the language is. There is very little to hide behind. No magic, no framework, no clever metaprogramming. You write the thing, and the thing does what you wrote. That is either wonderful or terrible depending on your day.
+
+My first week looked like this: I wrote programs that did nothing interesting, just to feel the shape of the language. I renamed variables too much. I fought the tooling. I missed features I took for granted — no string interpolation, no exceptions, no enums that felt like enums. I kept trying to make Go behave like the languages I knew. The language kept pushing back, politely but firmly.
+
+Eventually it stopped feeling like Go was missing things and started feeling like I was. The absence of features I missed turned out to be the absence of features I did not need.
+
+## What changed
+
+There are a handful of things that made me stay.
+
+The first is pace. Go programs start instantly and end cleanly. When the binary is four megabytes and the process is a single thing doing a single thing, you stop thinking about your runtime. You think about what it does. That sounds trivial until you have spent years thinking about Dockerfiles and virtual environments and dependency manifests, and you realize you just wanted to build something.
+
+The second is honesty. The language does not let you lie. If a function can fail, it says so. If a value is optional, it says so. The shape of a computation is on the surface. I had been reading code written by people who used cleverness as a hiding place, and I had absorbed their habits without noticing. Go made those habits impossible, and my code got clearer as a result.
+
+The third is the toolchain. A single formatter, a single module system, a single linter that ships with the compiler. The first time I watched `gofmt` turn my messy code into the exact same shape every other Go program has, I felt something I had honestly never felt from a programming language: relief. The formatting argument is over. The structure argument is over. The only argument left is the code.
+
+## The projects
+
+I learned Go by building. There is no other way, really. Reading does not count.
+
+My first project was small and deliberate: an audit tool that inspected web application firewall logs, normalized them into something human-readable, and surfaced the requests that mattered. I built it because I needed it for a personal project, and I built it in Go because I wanted to see what the language felt like outside of tutorials. That project, modintel, is the reason my Go is what it is today. It is the only honest credential I have.
+
+What that project taught me was not syntax. Syntax I could have learned from a book. It taught me judgment. Every decision in that tool had to be defensible in a way that a Python tool did not. I wrote it, I reviewed it, I deployed it, and I watched its behavior under load. Go forced me to answer the questions a casual language would have let me skip. When the tool had to be right, being forced to answer those questions turned out to be the point.
+
+The second project came later and it was bigger: a small service that sat between a load balancer and a processing pipeline, just because I wanted to see how Go behaved when the workload was real. It ran for weeks without a restart. I did not think that was special until I remembered the previous service I had written in another language, which had not.
+
+I would not claim that Go is the reason those projects worked. Would not claim it is the reason they were good. But I will claim this: Go removed a category of problems from my life, and I have never missed them.
+
+## The boring decision, on purpose
+
+There is a specific kind of engineer I have started admiring: the one who picks the least exciting technology that solves the problem, and then spends their energy on the problem itself. Go is that technology for me. Nothing about it is flashy. It does not promise a paradigm shift. It does not trend. It will not make you a better engineer by association.
+
+What Go did was narrower and more valuable. It took my energy back. The hours I used to spend wrestling with abstraction and configuration and magical behavior, I now spend on the actual work. The code got shorter. The intent got clearer. The debugging got easier, because when something breaks I am looking at the thing I wrote, not at the framework I inherited.
+
+That is not a technical claim. That is a quality-of-life claim. And for what I build — backend services, security tooling, the part of the internet nobody sees until it breaks — quality of life is the whole ballgame.
+
+## What I know now that I did not
+
+Go rewards people who like to delete things. The shorter the program that does the job, the better the program. I lost that instinct in the languages I worked in before, where cleverness was a virtue. I am slowly regaining it.
+
+Go also rewards people who read the standard library like a novel. There is more in there than most people use, and learning what exists is worth more than learning what is fashionable.
+
+And Go rewards the boring decision. To write this post I had to think about why I keep reaching for Go in new projects. The answer is not that it is the best language. It is that it stops being a question. Once you finish the setup, the language disappears, and you are left with the problem you came to solve. That is the highest compliment I can pay a tool.
+
+## Advice, of the limited kind I can give
+
+If you are thinking about learning Go, here is what I would say after a few months of using it for real work.
+
+Do not start with a big project. Start with one that is small enough to finish and real enough to ship. A tool you need, a service that has to run, a thing whose failure would bother you. Go excels at that size.
+
+Do not try to port your habits from another language. The shape of Go code is different for a reason, and fighting it will make you miserable. Accept the friction for a month and see what is left when it fades.
+
+Read the source of the standard library. Not all of it, but the parts you use. It will teach you more about writing good Go than any tutorial will.
+
+And be patient with your own first hundred lines. They will be bad. Mine were. The language is not the hard part. The habit of writing boring, clear, direct code is the hard part, and Go will teach it to you whether or not you planned to learn it.
+
+That is it. No roadmap, no benchmarks, no list of features. If you wanted the technical argument, there are better posts than this one. What I wanted to say is simpler: I picked up Go, I built with it, and I am not going back to thinking of my language as the interesting part of the work. The work is the interesting part. Go lets me get to it.
