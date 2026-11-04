@@ -6,7 +6,9 @@ const REPO = 'natanim-kemal/natanim.dev';
 const GISCUS_ORIGIN = 'https://giscus.app';
 
 const themeName = () =>
-  document.documentElement.classList.contains('dark') ? 'dark_dimmed' : 'light';
+  document.documentElement.classList.contains('dark')
+    ? `${window.location.origin}/giscus-theme.css` // matches site bg #0a0a0a
+    : 'light';
 
 // React 19 hoists <script src> into <head>, and giscus inserts its iframe right
 // after the script — landing it in <head> (display:none, never loads).
