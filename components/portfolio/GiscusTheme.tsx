@@ -42,9 +42,9 @@ export default function GiscusTheme() {
     <script
       src="https://giscus.app/client.js"
       data-repo={REPO}
-      data-repo-id=""
+      data-repo-id="R_kgDOQllHYQ"
       data-category="Announcements"
-      data-category-id=""
+      data-category-id="DIC_kwDOQllHYc4DKYN_"
       data-mapping="pathname"
       data-strict="0"
       data-reactions-enabled="1"
