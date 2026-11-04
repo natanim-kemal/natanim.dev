@@ -4,7 +4,7 @@
 
 # ✦ natanim.dev
 
-**Backend · Security · Product Engineering**
+**Backend · Security · Product Engineer**
 
 A modern, responsive portfolio website built with Next.js 16, Tailwind CSS, and TypeScript.
 
