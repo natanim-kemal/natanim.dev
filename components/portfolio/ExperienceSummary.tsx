@@ -34,11 +34,11 @@ export default function ExperienceSummary({
         <span className="text-muted-foreground text-sm leading-relaxed">{summary}</span>
       </button>
       {open && (
-        <ul className="border-border mt-2 ml-[7px] flex flex-col gap-1.5 border-l pl-4">
+        <ul className="mt-2 ml-1 flex flex-col gap-1.5 pl-4">
           {details.map((item) => (
             <li
               key={item}
-              className="text-muted-foreground relative text-sm leading-relaxed before:text-foreground/40 before:absolute before:-left-4 before:content-['–']"
+              className="text-muted-foreground relative text-sm leading-relaxed before:text-foreground/40 before:absolute before:-left-4 before:content-['✓']"
             >
               {item}
             </li>
