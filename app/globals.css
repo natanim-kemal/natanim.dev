@@ -80,8 +80,17 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    /* no scroll-behavior: smooth — Next.js's scroll-to-top animates and gets
+       aborted when route content swaps, stranding the page partway down */
+    /* same gap as a fresh load: matches the layout's pt-12 / sm:pt-24 */
+    scroll-padding-top: 3rem;
     color-scheme: light;
+  }
+
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-top: 6rem;
+    }
   }
 
   html.dark {
