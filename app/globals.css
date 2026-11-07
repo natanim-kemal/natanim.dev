@@ -48,7 +48,7 @@
   --ring: oklch(0.708 0 0);
   --signal: oklch(0.723 0.219 149.579);
   --dot: oklch(0.86 0 0);
-  --selection: oklch(0.92 0.06 85);
+  --selection: oklch(0.92 0.06 255);
 }
 
 .dark {
@@ -71,7 +71,7 @@
   --ring: oklch(0.556 0 0);
   --signal: oklch(0.723 0.219 149.579);
   --dot: oklch(1 0 0 / 20%);
-  --selection: oklch(0.38 0.07 85);
+  --selection: oklch(0.38 0.07 255);
 }
 
 @layer base {
@@ -117,19 +117,22 @@
   -webkit-mask-image: linear-gradient(to top, black, transparent);
 }
 
-/* blog invite: pen scribbles while the underline draws itself, then restarts */
+/* blog invite: pen scribbles while the underline draws itself, then restarts.
+   4.65s cycle = 1.21s draw (unchanged speed) + 3s hold + 0.45s fade-out;
+   pen wiggles on the same absolute schedule as before, then rests */
 @keyframes pen-write {
   0%,
+  47%,
   100% {
     transform: translateX(0) rotate(0deg);
   }
-  25% {
+  12% {
     transform: translateX(4px) rotate(-8deg);
   }
-  50% {
+  24% {
     transform: translateX(9px) rotate(4deg);
   }
-  75% {
+  35% {
     transform: translateX(4px) rotate(-5deg);
   }
 }
@@ -139,8 +142,8 @@
     stroke-dashoffset: 100;
     opacity: 1;
   }
-  55%,
-  85% {
+  26%,
+  90% {
     stroke-dashoffset: 0;
     opacity: 1;
   }
@@ -151,12 +154,12 @@
 }
 
 .write-pen {
-  animation: pen-write 2.2s ease-in-out infinite;
+  animation: pen-write 4.65s ease-in-out infinite;
 }
 
 .write-line {
   stroke-dasharray: 100;
-  animation: write-line 2.2s ease-in-out infinite;
+  animation: write-line 4.65s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
