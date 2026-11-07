@@ -220,7 +220,7 @@ export default function Home() {
           <Reveal delay={0}>
             <span className="relative block size-20 shrink-0 overflow-hidden rounded-full border shadow-lg sm:size-28 md:size-32">
               <Image
-                src="/pf.jpg"
+                src="/ascii.webp"
                 alt="Natanim Kemal"
                 fill
                 priority
