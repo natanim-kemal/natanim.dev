@@ -190,7 +190,7 @@ export const projects: Project[] = [
     description:
       'An ML pipeline that augments Coraza: learns from traffic, surfaces threats, and gives analysts a live dashboard for WAF detections.',
     tags: ['Go', 'Python', 'Caddy', 'Coraza'],
-    image: '/projects/modintel.png',
+    image: '/projects/modintel.jpg',
     href: 'https://modintel.natanim.dev',
     source: 'https://github.com/modintel',
   },
