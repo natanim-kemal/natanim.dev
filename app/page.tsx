@@ -52,6 +52,7 @@ import {
   SiWireshark,
 } from 'react-icons/si';
 import { FaAws, FaGithub, FaLinkedinIn, FaTelegram, FaXTwitter } from 'react-icons/fa6';
+import { FaTelegramPlane } from 'react-icons/fa';
 import Link from 'next/link';
 import LocalTime from '@/components/portfolio/LocalTime';
 import ContactButton from '@/components/portfolio/ContactButton';
@@ -283,11 +284,8 @@ export default function Home() {
         <Reveal delay={0.14} className="mt-6 flex flex-wrap items-center gap-3">
           <ContactButton className={primaryButton}>
             Let&apos;s talk
-            <ArrowUpRight className="size-4" />
+            <FaTelegramPlane className="size-4" />
           </ContactButton>
-          <a href="#projects" className={secondaryButton}>
-            Selected work
-          </a>
           <UpworkLink iconOnly className={secondaryButton} />
         </Reveal>
       </section>
