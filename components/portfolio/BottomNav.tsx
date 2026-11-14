@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { BriefcaseBusiness, FolderGit2, Home, Moon, Notebook, Sun } from 'lucide-react';
-import { FaEnvelope, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
+import { FaEnvelope, FaGithub, FaLinkedinIn, FaTelegram } from 'react-icons/fa6';
 import { profile } from '@/lib/portfolio';
 
 const button =
@@ -91,7 +91,7 @@ export default function BottomNav() {
           aria-label="Email"
           className={button}
         >
-          <FaEnvelope className={icon} />
+          <FaTelegram className={icon} />
           <Tip label="Email" />
         </button>
         <span className="mx-0.5 h-6 w-px shrink-0 bg-border sm:mx-1" />
