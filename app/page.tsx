@@ -47,6 +47,7 @@ import {
   SiSqlite,
   SiTailwindcss,
   SiTypescript,
+  SiUpwork,
   SiVercel,
   SiWireshark,
 } from 'react-icons/si';
@@ -72,6 +73,32 @@ const secondaryButton =
   'inline-flex h-9 items-center gap-2 rounded-lg border px-3.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring';
 const inlineLink =
   'font-medium text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground';
+
+function UpworkLink({ className, iconOnly = false }: { className: string; iconOnly?: boolean }) {
+  return (
+    <a
+      href={profile.upwork}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Hire me on Upwork"
+      title="Hire me on Upwork"
+      className={className}
+    >
+      {iconOnly ? (
+        <>
+          <SiUpwork className="size-4" style={{ color: '#14a800' }} />
+          <ArrowUpRight className="text-muted-foreground size-3.5" />
+        </>
+      ) : (
+        <>
+          Hire me on
+          <SiUpwork className="size-3.5" style={{ color: '#14a800' }} />
+          <ArrowUpRight className="size-4" />
+        </>
+      )}
+    </a>
+  );
+}
 
 const skillIcons: Record<string, ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
   Go: SiGo,
@@ -247,6 +274,7 @@ export default function Home() {
           <a href="#projects" className={secondaryButton}>
             Selected work
           </a>
+          <UpworkLink iconOnly className={secondaryButton} />
         </Reveal>
       </section>
 
@@ -580,6 +608,7 @@ export default function Home() {
                   <FaLinkedinIn className="size-3.5" />
                   LinkedIn
                 </a>
+                <UpworkLink className={secondaryButton} />
               </div>
               <div className="text-muted-foreground mt-1 flex items-center gap-4">
                 <a
