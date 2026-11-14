@@ -81,13 +81,18 @@ function UpworkLink({ className, iconOnly = false }: { className: string; iconOn
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Hire me on Upwork"
-      title="Hire me on Upwork"
-      className={className}
+      className={iconOnly ? `${className} group relative` : className}
     >
       {iconOnly ? (
         <>
           <SiUpwork className="size-4" style={{ color: '#14a800' }} />
           <ArrowUpRight className="text-muted-foreground size-3.5" />
+          <span
+            aria-hidden
+            className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 translate-y-1 scale-95 rounded-xl bg-primary px-4 py-2 text-sm whitespace-nowrap text-primary-foreground opacity-0 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all delay-0 duration-150 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:delay-100"
+          >
+            Hire me on Upwork
+          </span>
         </>
       ) : (
         <>
