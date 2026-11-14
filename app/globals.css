@@ -172,3 +172,30 @@
     stroke-dashoffset: 0;
   }
 }
+
+/* theme switch: new theme expands as a circle from the toggle button
+   (button position in --vt-x/--vt-y, full-coverage radius in --vt-r) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  animation: theme-reveal 0.6s ease-in;
+}
+
+@keyframes theme-reveal {
+  from {
+    clip-path: circle(0 at var(--vt-x, 100%) var(--vt-y, 100%));
+  }
+  to {
+    clip-path: circle(var(--vt-r, 200%) at var(--vt-x, 100%) var(--vt-y, 100%));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
