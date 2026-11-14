@@ -105,6 +105,15 @@ function UpworkLink({ className, iconOnly = false }: { className: string; iconOn
   );
 }
 
+function OpenCodeIcon({ className, style }: { className?: string; style?: React.CSSProperties }) {
+  return (
+    <svg viewBox="96 96 320 320" fill="currentColor" className={className} style={style} aria-hidden>
+      <path fillRule="evenodd" d="M384 416H128V96H384V416ZM320 160H192V352H320V160Z" />
+      <path d="M320 224V352H192V224H320Z" opacity="0.65" />
+    </svg>
+  );
+}
+
 const skillIcons: Record<string, ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
   Go: SiGo,
   Python: SiPython,
@@ -147,11 +156,11 @@ const skillIcons: Record<string, ComponentType<{ className?: string; style?: Rea
   Railway: SiRailway,
   'T3 Code': Workflow,
   Claude: SiClaude,
+  OpenCode: OpenCodeIcon,
 };
 const skillImages: Record<string, string> = {
   Convex: '/rare-skill/convex.webp',
   'T3 Code': '/rare-skill/t3-code.webp',
-  OpenCode: '/rare-skill/opencode-dark.webp',
 };
 
 const skillColors: Record<string, string> = {
