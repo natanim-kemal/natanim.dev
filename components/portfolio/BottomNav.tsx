@@ -1,6 +1,6 @@
 'use client';
 
-import type { ReactNode } from 'react';
+import type { MouseEvent, ReactNode } from 'react';
 import Link from 'next/link';
 import { BriefcaseBusiness, FolderGit2, Home, Moon, Notebook, Sun } from 'lucide-react';
 import { FaEnvelope, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
@@ -56,9 +56,26 @@ function NavLink({
 }
 
 export default function BottomNav() {
-  const toggleTheme = () => {
-    const dark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  const toggleTheme = (e: MouseEvent<HTMLButtonElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+    const apply = () => {
+      const dark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    };
+    const root = document.documentElement;
+    root.style.setProperty('--vt-x', `${x}px`);
+    root.style.setProperty('--vt-y', `${y}px`);
+    root.style.setProperty(
+      '--vt-r',
+      `${Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y))}px`,
+    );
+    if (document.startViewTransition) {
+      document.startViewTransition(apply);
+    } else {
+      apply();
+    }
   };
 
   return (
