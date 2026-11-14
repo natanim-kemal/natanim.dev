@@ -88,11 +88,11 @@ export default function BottomNav() {
         <button
           type="button"
           onClick={() => window.dispatchEvent(new Event('natanim:contact'))}
-          aria-label="Email"
+          aria-label="Telegram"
           className={button}
         >
           <FaTelegram className={icon} />
-          <Tip label="Email" />
+          <Tip label="Telegram" />
         </button>
         <span className="mx-0.5 h-6 w-px shrink-0 bg-border sm:mx-1" />
         <button
