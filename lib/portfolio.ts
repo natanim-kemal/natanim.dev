@@ -7,6 +7,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/natanim-kemal',
   x: 'https://x.com/straydeg',
   telegram: 'https://t.me/phnatanim',
+  upwork: 'https://upwork.com/freelancers/~01b6fdbddcdcd43400',
 } as const;
 
 export const links = {
