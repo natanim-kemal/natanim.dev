@@ -154,6 +154,7 @@ export type Project = {
   description: string;
   tags: string[];
   image: string;
+  darkImage?: string;
   href?: string;
   source?: string;
 };
@@ -165,6 +166,7 @@ export const projects: Project[] = [
       'A read-later vault that turns saved links, videos, and books into a habit, smart reminders, clean organization, and sync across devices.',
     tags: ['Flutter', 'TypeScript', 'Convex', 'Dart', 'Clerk', 'GCP'],
     image: '/projects/rem.png',
+    darkImage: '/projects/rem-white.webp',
     href: 'https://rem.natanim.dev',
     source: 'https://github.com/natanim-kemal/rem',
   },
@@ -173,7 +175,8 @@ export const projects: Project[] = [
     description:
       'One shared ledger for a coffee business: daily prices, sales, purchases, returns, and transfers. Set prices in the app or record sales from Telegram, in English or Amharic.',
     tags: ['Flutter', 'Firebase', 'Cloudflare', 'Telegram', 'Next.js', 'i18n', 'GCP'],
-    image: '/projects/cofiz.jpg',
+    image: '/projects/cofiz.webp',
+    darkImage: '/projects/cofiz-white.webp',
     href: 'https://cofiz-web.vercel.app',
     source: 'https://github.com/cofiz-org',
   },
@@ -183,6 +186,7 @@ export const projects: Project[] = [
       'Cross-platform PDF sync. Drop a file on one device and pick it up on another, mobile and desktop, without manual imports.',
     tags: ['Flutter', 'NestJS', 'TypeScript', 'PostgreSQL', 'AWS', 'Docker', 'Sentry'],
     image: '/projects/synce.png',
+    darkImage: '/projects/synce-white.webp',
     href: 'https://synce.natanim.dev',
     source: 'https://github.com/natanim-kemal/synce',
   },
@@ -191,7 +195,8 @@ export const projects: Project[] = [
     description:
       'An ML pipeline that augments Coraza: learns from traffic, surfaces threats, and gives analysts a live dashboard for WAF detections.',
     tags: ['Go', 'Python', 'Docker', 'MongoDB', 'Caddy', 'Coraza', 'Linux'],
-    image: '/projects/modintel.jpg',
+    image: '/projects/modintel.webp',
+    darkImage: '/projects/modintel-white.webp',
     href: 'https://modintel.natanim.dev',
     source: 'https://github.com/modintel',
   },
@@ -201,6 +206,7 @@ export const projects: Project[] = [
       'A minimalist productivity app built around deep-work sessions and flow state, with a sharp landing page to launch it.',
     tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'PostgreSQL', 'Supabase', 'Railway'],
     image: '/projects/zentask.png',
+    darkImage: '/projects/zentask-white.webp',
     href: 'https://zentask.natanim.dev',
     source: 'https://github.com/natanim-kemal/zentask-site',
   },
