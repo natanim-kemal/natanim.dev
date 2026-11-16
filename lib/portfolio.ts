@@ -163,7 +163,7 @@ export const projects: Project[] = [
     name: 'rem',
     description:
       'A read-later vault that turns saved links, videos, and books into a habit, smart reminders, clean organization, and sync across devices.',
-    tags: ['Flutter', 'Dart', 'Convex', 'Clerk'],
+    tags: ['Flutter', 'TypeScript', 'Convex', 'Dart', 'Clerk'],
     image: '/projects/rem.png',
     href: 'https://rem.natanim.dev',
     source: 'https://github.com/natanim-kemal/rem',
@@ -172,7 +172,7 @@ export const projects: Project[] = [
     name: 'cofiz',
     description:
       'One shared ledger for a coffee business: daily prices, sales, purchases, returns, and transfers. Set prices in the app or record sales from Telegram, in English or Amharic.',
-    tags: ['Flutter', 'Firebase', 'Telegram', 'i18n'],
+    tags: ['Flutter', 'Firebase', 'Cloudflare', 'Telegram', 'Next.js', 'i18n'],
     image: '/projects/cofiz.png',
     href: 'https://cofiz-web.vercel.app',
     source: 'https://github.com/cofiz-org',
@@ -181,7 +181,7 @@ export const projects: Project[] = [
     name: 'synce',
     description:
       'Cross-platform PDF sync. Drop a file on one device and pick it up on another, mobile and desktop, without manual imports.',
-    tags: ['Flutter', 'NestJS', 'PostgreSQL', 'AWS'],
+    tags: ['Flutter', 'NestJS', 'TypeScript', 'PostgreSQL', 'AWS', 'Docker'],
     image: '/projects/synce.png',
     href: 'https://synce.natanim.dev',
     source: 'https://github.com/natanim-kemal/synce',
@@ -190,7 +190,7 @@ export const projects: Project[] = [
     name: 'modintel',
     description:
       'An ML pipeline that augments Coraza: learns from traffic, surfaces threats, and gives analysts a live dashboard for WAF detections.',
-    tags: ['Go', 'Python', 'Caddy', 'Coraza'],
+    tags: ['Go', 'Python', 'Docker', 'MongoDB', 'Caddy', 'Coraza'],
     image: '/projects/modintel.jpg',
     href: 'https://modintel.natanim.dev',
     source: 'https://github.com/modintel',
@@ -199,7 +199,7 @@ export const projects: Project[] = [
     name: 'zentask',
     description:
       'A minimalist productivity app built around deep-work sessions and flow state, with a sharp landing page to launch it.',
-    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Supabase'],
+    tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'PostgreSQL', 'Supabase'],
     image: '/projects/zentask.png',
     href: 'https://zentask.natanim.dev',
     source: 'https://github.com/natanim-kemal/zentask-site',
@@ -208,10 +208,26 @@ export const projects: Project[] = [
     name: 'akllyl',
     description:
       'A soft, editorial portfolio for a newborn photography studio, built to feel calm, load fast, and book sessions.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS'],
     image: '/projects/akllyl.png',
     href: 'https://akllyl.vercel.app',
     source: 'https://github.com/natanim-kemal/akllyl',
+  },
+  {
+    name: 'polyester',
+    description:
+      'A testnet market-making bot that hunts spreads above the live fee bar across every USDT pair, runs one position at a time, and pushes every fill, skip, and milestone to Telegram.',
+    tags: ['Python', 'Telegram', 'WebSocket', 'CLI'],
+    image: '/projects/polyester-bot.png',
+    source: 'https://github.com/natanim-kemal/polyester-bot',
+  },
+  {
+    name: 'hook',
+    description:
+      'A Chrome extension that scans every page you visit and flags phishing before you click: a Random Forest trained on 100,000+ real URLs, a Flask API behind it, and a dismissible warning banner on bad sites.',
+    tags: ['Python', 'Flask', 'JavaScript', 'Chrome Extension', 'Random Forest'],
+    image: '/projects/hook.png',
+    source: 'https://github.com/natanim-kemal/hook',
   },
 ];
 
