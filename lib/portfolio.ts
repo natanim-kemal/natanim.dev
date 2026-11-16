@@ -205,7 +205,7 @@ export const projects: Project[] = [
     description:
       'A minimalist productivity app built around deep-work sessions and flow state, with a sharp landing page to launch it.',
     tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'PostgreSQL', 'Supabase', 'Railway'],
-    image: '/projects/zentask.png',
+    image: '/projects/zentask.webp',
     darkImage: '/projects/zentask-white.webp',
     href: 'https://zentask.natanim.dev',
     source: 'https://github.com/natanim-kemal/zentask-site',
