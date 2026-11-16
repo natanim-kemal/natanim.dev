@@ -57,7 +57,7 @@ import Link from 'next/link';
 import LocalTime from '@/components/portfolio/LocalTime';
 import ContactButton from '@/components/portfolio/ContactButton';
 import ExperienceSummary from '@/components/portfolio/ExperienceSummary';
-import ProjectCard from '@/components/portfolio/ProjectCard';
+import ProjectGrid from '@/components/portfolio/ProjectGrid';
 import Reveal from '@/components/portfolio/Reveal';
 import {
   education,
@@ -541,18 +541,12 @@ export default function Home() {
               Things I&apos;ve shipped
             </h2>
             <p className="max-w-lg text-balance text-center text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed">
-              Six projects, from WAF auditing to consumer apps. Each one designed, built, and
-              live in production.
+              A handful of projects, from WAF auditing to trading bots. Each one designed, built,
+              and live in production.
             </p>
           </div>
         </div>
-        <div className="grid auto-rows-fr grid-cols-1 gap-3 sm:grid-cols-2">
-          {projects.map((project, index) => (
-            <Reveal key={project.name} delay={(index % 2) * 0.05} className="h-full">
-              <ProjectCard project={project} />
-            </Reveal>
-          ))}
-        </div>
+        <ProjectGrid projects={projects} />
       </section>
 
       <section id="open-source" className="flex flex-col gap-5">
