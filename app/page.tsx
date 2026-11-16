@@ -1,57 +1,8 @@
 import Image from 'next/image';
-import type { ComponentType, ReactNode } from 'react';
-import {
-  ArrowUpRight,
-  Award,
-  Clock3,
-  Database,
-  Mail,
-  Network,
-  PenLine,
-  BrickWall,
-  Radar,
-  Shield,
-  Siren,
-  Star,
-  Terminal,
-  Trophy,
-  Workflow,
-} from 'lucide-react';
-import {
-  SiClaude,
-  SiCloudflare,
-  SiDart,
-  SiDocker,
-  SiExpress,
-  SiFirebase,
-  SiFlutter,
-  SiGit,
-  SiGo,
-  SiGooglecloud,
-  SiGraphql,
-  SiJavascript,
-  SiKubernetes,
-  SiLinux,
-  SiMetasploit,
-  SiMongodb,
-  SiMysql,
-  SiNestjs,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiOwasp,
-  SiPostgresql,
-  SiPython,
-  SiReact,
-  SiRedis,
-  SiRailway,
-  SiSqlite,
-  SiTailwindcss,
-  SiTypescript,
-  SiUpwork,
-  SiVercel,
-  SiWireshark,
-} from 'react-icons/si';
-import { FaAws, FaGithub, FaLinkedinIn, FaTelegram, FaXTwitter } from 'react-icons/fa6';
+import type { ReactNode } from 'react';
+import { ArrowUpRight, Award, Clock3, Mail, PenLine, Star, Trophy } from 'lucide-react';
+import { SiUpwork } from 'react-icons/si';
+import { FaGithub, FaLinkedinIn, FaTelegram, FaXTwitter } from 'react-icons/fa6';
 import { FaTelegramPlane } from 'react-icons/fa';
 import Link from 'next/link';
 import LocalTime from '@/components/portfolio/LocalTime';
@@ -59,6 +10,7 @@ import ContactButton from '@/components/portfolio/ContactButton';
 import ExperienceSummary from '@/components/portfolio/ExperienceSummary';
 import ProjectGrid from '@/components/portfolio/ProjectGrid';
 import Reveal from '@/components/portfolio/Reveal';
+import { skillColors, skillIcons, skillImages } from '@/lib/tech-icons';
 import {
   education,
   experience,
@@ -106,102 +58,6 @@ function UpworkLink({ className, iconOnly = false }: { className: string; iconOn
   );
 }
 
-function OpenCodeIcon({ className, style }: { className?: string; style?: React.CSSProperties }) {
-  return (
-    <svg viewBox="96 96 320 320" fill="currentColor" className={className} style={style} aria-hidden>
-      <path fillRule="evenodd" d="M384 416H128V96H384V416ZM320 160H192V352H320V160Z" />
-      <path d="M320 224V352H192V224H320Z" opacity="0.65" />
-    </svg>
-  );
-}
-
-const skillIcons: Record<string, ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
-  Go: SiGo,
-  Python: SiPython,
-  TypeScript: SiTypescript,
-  JavaScript: SiJavascript,
-  Dart: SiDart,
-  SQL: Database,
-  PowerShell: Terminal,
-  'Node.js': SiNodedotjs,
-  Express: SiExpress,
-  NestJS: SiNestjs,
-  PostgreSQL: SiPostgresql,
-  MongoDB: SiMongodb,
-  MySQL: SiMysql,
-  SQLite: SiSqlite,
-  Redis: SiRedis,
-  gRPC: Network,
-  GraphQL: SiGraphql,
-  Firebase: SiFirebase,
-  Convex: Database,
-  Wireshark: SiWireshark,
-  Metasploit: SiMetasploit,
-  ModSecurity: Shield,
-  'OWASP CRS': SiOwasp,
-  'Coraza WAF': BrickWall,
-  Wazuh: Siren,
-  SIEM: Radar,
-  Flutter: SiFlutter,
-  React: SiReact,
-  'Next.js': SiNextdotjs,
-  'Tailwind CSS': SiTailwindcss,
-  Docker: SiDocker,
-  Kubernetes: SiKubernetes,
-  Linux: SiLinux,
-  Git: SiGit,
-  GCP: SiGooglecloud,
-  AWS: FaAws,
-  Cloudflare: SiCloudflare,
-  Vercel: SiVercel,
-  Railway: SiRailway,
-  'T3 Code': Workflow,
-  Claude: SiClaude,
-  OpenCode: OpenCodeIcon,
-};
-const skillImages: Record<string, string> = {
-  Convex: '/rare-skill/convex.webp',
-  'T3 Code': '/rare-skill/t3-code.webp',
-};
-
-const skillColors: Record<string, string> = {
-  TypeScript: '#3178c6',
-  JavaScript: '#f7df1e',
-  Go: '#00add8',
-  Dart: '#0175c2',
-  Python: '#3776ab',
-  SQL: '#64748b',
-  PowerShell: '#5391fe',
-  'Node.js': '#5fa04c',
-  NestJS: '#e0234e',
-  PostgreSQL: '#4169e1',
-  MongoDB: '#47a248',
-  MySQL: '#00758f',
-  SQLite: '#2f7ed8',
-  Redis: '#dc382d',
-  gRPC: '#5a9fd4',
-  GraphQL: '#e535ab',
-  Firebase: '#ffca28',
-  Convex: '#e9e9e9',
-  Wireshark: '#1679a7',
-  Metasploit: '#5a8dee',
-  ModSecurity: '#d97706',
-  'OWASP CRS': '#d97706',
-  'Coraza WAF': '#d97706',
-  Wazuh: '#47769c',
-  SIEM: '#d97706',
-  Flutter: '#02569b',
-  React: '#61dafb',
-  'Tailwind CSS': '#38bdf8',
-  Docker: '#2496ed',
-  Kubernetes: '#326ce5',
-  Linux: '#9ca3af',
-  Git: '#f05032',
-  GCP: '#4285f4',
-  AWS: '#ff9900',
-  Cloudflare: '#f38020',
-  Claude: '#d97757',
-};
 
 function SectionTitle({ index, children }: { index: string; children: ReactNode }) {
   return (
