@@ -214,7 +214,7 @@ export const projects: Project[] = [
     source: 'https://github.com/natanim-kemal/akllyl',
   },
   {
-    name: 'polyester',
+    name: 'polyester-bot',
     description:
       'A testnet market-making bot that hunts spreads above the live fee bar across every USDT pair, runs one position at a time, and pushes every fill, skip, and milestone to Telegram.',
     tags: ['Python', 'Telegram', 'WebSocket', 'CLI'],
