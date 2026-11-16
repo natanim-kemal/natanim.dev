@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ArrowUpRight, Github, Globe } from 'lucide-react';
 import type { Project } from '@/lib/portfolio';
+import { skillColors, skillIcons, skillImages } from '@/lib/tech-icons';
 
 const chip =
   'flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-[11px] font-semibold transition-colors';
@@ -57,14 +58,31 @@ export default function ProjectCard({ project }: { project: Project }) {
         </p>
 
         <div className="mt-auto flex flex-wrap gap-1">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-foreground h-6 w-fit rounded-md border px-2 text-[11px] font-medium leading-5"
-            >
-              {tag}
-            </span>
-          ))}
+          {project.tags.map((tag) => {
+            const Icon = skillIcons[tag];
+            const image = skillImages[tag];
+            return (
+              <span
+                key={tag}
+                className="group/chip text-foreground relative flex h-6 w-6 items-center justify-center rounded-md border"
+              >
+                {image ? (
+                  <Image src={image} alt="" width={14} height={14} className="size-3.5 object-contain" />
+                ) : Icon ? (
+                  <Icon className="size-3.5" style={{ color: skillColors[tag] || 'currentColor' }} />
+                ) : (
+                  <span className="size-1.5 rounded-full bg-current" />
+                )}
+                <span className="sr-only">{tag}</span>
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 translate-y-1 scale-95 rounded-xl bg-primary px-4 py-2 text-sm whitespace-nowrap text-primary-foreground opacity-0 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all delay-0 duration-150 group-hover/chip:translate-y-0 group-hover/chip:scale-100 group-hover/chip:opacity-100 group-hover/chip:delay-100"
+                >
+                  {tag}
+                </span>
+              </span>
+            );
+          })}
         </div>
 
         <div className="mt-auto flex flex-wrap gap-2">
