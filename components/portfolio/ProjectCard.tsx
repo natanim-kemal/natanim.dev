@@ -7,6 +7,7 @@ const chip =
   'flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-[11px] font-semibold transition-colors';
 const chipPrimary = `${chip} border-transparent bg-foreground text-background hover:bg-foreground/85`;
 const chipGhost = `${chip} text-muted-foreground hover:bg-muted hover:text-foreground`;
+const previewClass = 'object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]';
 
 export default function ProjectCard({ project }: { project: Project }) {
   const preview = (
@@ -16,8 +17,17 @@ export default function ProjectCard({ project }: { project: Project }) {
         alt={`${project.name} preview`}
         fill
         sizes="(min-width: 640px) 360px, 100vw"
-        className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+        className={`${previewClass}${project.darkImage ? ' dark:hidden' : ''}`}
       />
+      {project.darkImage && (
+        <Image
+          src={project.darkImage}
+          alt={`${project.name} preview`}
+          fill
+          sizes="(min-width: 640px) 360px, 100vw"
+          className={`${previewClass} hidden dark:block`}
+        />
+      )}
     </div>
   );
 
