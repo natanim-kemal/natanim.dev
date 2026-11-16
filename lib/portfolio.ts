@@ -163,7 +163,7 @@ export const projects: Project[] = [
     name: 'rem',
     description:
       'A read-later vault that turns saved links, videos, and books into a habit, smart reminders, clean organization, and sync across devices.',
-    tags: ['Flutter', 'TypeScript', 'Convex', 'Dart', 'Clerk'],
+    tags: ['Flutter', 'TypeScript', 'Convex', 'Dart', 'Clerk', 'GCP'],
     image: '/projects/rem.png',
     href: 'https://rem.natanim.dev',
     source: 'https://github.com/natanim-kemal/rem',
@@ -172,7 +172,7 @@ export const projects: Project[] = [
     name: 'cofiz',
     description:
       'One shared ledger for a coffee business: daily prices, sales, purchases, returns, and transfers. Set prices in the app or record sales from Telegram, in English or Amharic.',
-    tags: ['Flutter', 'Firebase', 'Cloudflare', 'Telegram', 'Next.js', 'i18n'],
+    tags: ['Flutter', 'Firebase', 'Cloudflare', 'Telegram', 'Next.js', 'i18n', 'GCP'],
     image: '/projects/cofiz.jpg',
     href: 'https://cofiz-web.vercel.app',
     source: 'https://github.com/cofiz-org',
@@ -181,7 +181,7 @@ export const projects: Project[] = [
     name: 'synce',
     description:
       'Cross-platform PDF sync. Drop a file on one device and pick it up on another, mobile and desktop, without manual imports.',
-    tags: ['Flutter', 'NestJS', 'TypeScript', 'PostgreSQL', 'AWS', 'Docker'],
+    tags: ['Flutter', 'NestJS', 'TypeScript', 'PostgreSQL', 'AWS', 'Docker', 'Sentry'],
     image: '/projects/synce.png',
     href: 'https://synce.natanim.dev',
     source: 'https://github.com/natanim-kemal/synce',
@@ -190,7 +190,7 @@ export const projects: Project[] = [
     name: 'modintel',
     description:
       'An ML pipeline that augments Coraza: learns from traffic, surfaces threats, and gives analysts a live dashboard for WAF detections.',
-    tags: ['Go', 'Python', 'Docker', 'MongoDB', 'Caddy', 'Coraza'],
+    tags: ['Go', 'Python', 'Docker', 'MongoDB', 'Caddy', 'Coraza', 'Linux'],
     image: '/projects/modintel.jpg',
     href: 'https://modintel.natanim.dev',
     source: 'https://github.com/modintel',
@@ -199,7 +199,7 @@ export const projects: Project[] = [
     name: 'zentask',
     description:
       'A minimalist productivity app built around deep-work sessions and flow state, with a sharp landing page to launch it.',
-    tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'PostgreSQL', 'Supabase'],
+    tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'PostgreSQL', 'Supabase', 'Railway'],
     image: '/projects/zentask.png',
     href: 'https://zentask.natanim.dev',
     source: 'https://github.com/natanim-kemal/zentask-site',
@@ -208,7 +208,7 @@ export const projects: Project[] = [
     name: 'akllyl',
     description:
       'A soft, editorial portfolio for a newborn photography studio, built to feel calm, load fast, and book sessions.',
-    tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS'],
+    tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Vercel'],
     image: '/projects/akllyl.png',
     href: 'https://akllyl.vercel.app',
     source: 'https://github.com/natanim-kemal/akllyl',
