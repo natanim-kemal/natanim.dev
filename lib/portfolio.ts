@@ -173,7 +173,7 @@ export const projects: Project[] = [
     description:
       'One shared ledger for a coffee business: daily prices, sales, purchases, returns, and transfers. Set prices in the app or record sales from Telegram, in English or Amharic.',
     tags: ['Flutter', 'Firebase', 'Cloudflare', 'Telegram', 'Next.js', 'i18n'],
-    image: '/projects/cofiz.png',
+    image: '/projects/cofiz.jpg',
     href: 'https://cofiz-web.vercel.app',
     source: 'https://github.com/cofiz-org',
   },
