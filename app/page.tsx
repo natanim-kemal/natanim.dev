@@ -295,7 +295,7 @@ export default function Home() {
                 <ArrowUpRight className="text-muted-foreground size-3.5 -translate-x-1 opacity-0 transition-all duration-200 group-hover/link:translate-x-0 group-hover/link:opacity-100" />
               </a>
               <div className="mt-1.5 text-sm text-muted-foreground">{education.degree}</div>
-              <div className="mt-0.5 text-xs text-muted-foreground">{education.detail}</div>
+              <div className="mt-0.5 text-xs text-blue-500">{education.detail}</div>
             </div>
           </div>
         </Reveal>
