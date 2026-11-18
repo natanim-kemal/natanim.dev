@@ -161,6 +161,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: 'modintel',
+    description:
+      'An ML pipeline that augments Coraza: learns from traffic, surfaces threats, and gives analysts a live dashboard for WAF detections.',
+    tags: ['Go', 'Python', 'Docker', 'MongoDB', 'Caddy', 'Coraza', 'Linux'],
+    image: '/projects/modintel.png',
+    href: 'https://modintel.natanim.dev',
+    source: 'https://github.com/modintel',
+  },
+  {
     name: 'rem',
     description:
       'A read-later vault that turns saved links, videos, and books into a habit, smart reminders, clean organization, and sync across devices.',
@@ -189,16 +198,6 @@ export const projects: Project[] = [
     darkImage: '/projects/synce-white.webp',
     href: 'https://synce.natanim.dev',
     source: 'https://github.com/natanim-kemal/synce',
-  },
-  {
-    name: 'modintel',
-    description:
-      'An ML pipeline that augments Coraza: learns from traffic, surfaces threats, and gives analysts a live dashboard for WAF detections.',
-    tags: ['Go', 'Python', 'Docker', 'MongoDB', 'Caddy', 'Coraza', 'Linux'],
-    image: '/projects/modintel.webp',
-    darkImage: '/projects/modintel-white.webp',
-    href: 'https://modintel.natanim.dev',
-    source: 'https://github.com/modintel',
   },
   {
     name: 'zentask',
