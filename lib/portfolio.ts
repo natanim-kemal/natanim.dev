@@ -165,7 +165,7 @@ export const projects: Project[] = [
     description:
       'An ML pipeline that augments Coraza: learns from traffic, surfaces threats, and gives analysts a live dashboard for WAF detections.',
     tags: ['Go', 'Python', 'Docker', 'MongoDB', 'Caddy', 'Coraza', 'Linux'],
-    image: '/projects/modintel.png',
+    image: '/projects/modintel.webp',
     href: 'https://modintel.natanim.dev',
     source: 'https://github.com/modintel',
   },
@@ -174,8 +174,7 @@ export const projects: Project[] = [
     description:
       'A read-later vault that turns saved links, videos, and books into a habit, smart reminders, clean organization, and sync across devices.',
     tags: ['Flutter', 'TypeScript', 'Convex', 'Dart', 'Clerk', 'GCP'],
-    image: '/projects/rem.png',
-    darkImage: '/projects/rem-white.webp',
+    image: '/projects/rem.webp',
     href: 'https://rem.natanim.dev',
     source: 'https://github.com/natanim-kemal/rem',
   },
@@ -194,7 +193,7 @@ export const projects: Project[] = [
     description:
       'Cross-platform PDF sync. Drop a file on one device and pick it up on another, mobile and desktop, without manual imports.',
     tags: ['Flutter', 'NestJS', 'TypeScript', 'PostgreSQL', 'AWS', 'Docker', 'Sentry'],
-    image: '/projects/synce.png',
+    image: '/projects/synce.webp',
     darkImage: '/projects/synce-white.webp',
     href: 'https://synce.natanim.dev',
     source: 'https://github.com/natanim-kemal/synce',
@@ -214,7 +213,7 @@ export const projects: Project[] = [
     description:
       'A soft, editorial portfolio for a newborn photography studio, built to feel calm, load fast, and book sessions.',
     tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Vercel'],
-    image: '/projects/akllyl.png',
+    image: '/projects/akllyl.webp',
     href: 'https://akllyl.vercel.app',
     source: 'https://github.com/natanim-kemal/akllyl',
   },
@@ -223,7 +222,7 @@ export const projects: Project[] = [
     description:
       'A testnet market-making bot that hunts spreads above the live fee bar across every USDT pair, runs one position at a time, and pushes every fill, skip, and milestone to Telegram.',
     tags: ['Python', 'Telegram', 'WebSocket', 'CLI'],
-    image: '/projects/polyester-bot.png',
+    image: '/projects/polyester-bot.webp',
     source: 'https://github.com/natanim-kemal/polyester-bot',
   },
   {
@@ -231,7 +230,7 @@ export const projects: Project[] = [
     description:
       'A Chrome extension that scans every page you visit and flags phishing before you click: a Random Forest trained on 100,000+ real URLs, a Flask API behind it, and a dismissible warning banner on bad sites.',
     tags: ['Python', 'Flask', 'JavaScript', 'Chrome Extension', 'Random Forest'],
-    image: '/projects/hook.png',
+    image: '/projects/hook.webp',
     source: 'https://github.com/natanim-kemal/hook',
   },
 ];
