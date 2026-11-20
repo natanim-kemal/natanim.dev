@@ -194,7 +194,6 @@ export const projects: Project[] = [
       'Cross-platform PDF sync. Drop a file on one device and pick it up on another, mobile and desktop, without manual imports.',
     tags: ['Flutter', 'NestJS', 'TypeScript', 'PostgreSQL', 'AWS', 'Docker', 'Sentry'],
     image: '/projects/synce.webp',
-    darkImage: '/projects/synce-white.webp',
     href: 'https://synce.natanim.dev',
     source: 'https://github.com/natanim-kemal/synce',
   },
