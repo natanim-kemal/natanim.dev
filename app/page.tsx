@@ -243,11 +243,11 @@ export default function Home() {
         {experience.map((job, index) => (
           <Reveal key={job.org} delay={index * 0.04}>
             <div
-              className={`flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-6 ${
+              className={`flex items-start justify-between gap-3 ${
                 index < experience.length - 1 ? 'border-b border-border/70 pb-6' : ''
               }`}
             >
-              <div className="flex gap-3">
+              <div className="flex min-w-0 gap-3">
                 <OrgLogo logo={job.logo} mark={job.mark} org={job.org} />
                 <div className="min-w-0">
                   <div className="flex items-center gap-2 font-semibold leading-none">
@@ -256,13 +256,17 @@ export default function Home() {
                         href={job.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group/link inline-flex items-center gap-1.5"
+                        className="group/link inline-flex min-w-0 items-center gap-1.5"
                       >
-                        {job.org}
-                        <ArrowUpRight className="text-muted-foreground size-3.5 -translate-x-1 opacity-0 transition-all duration-200 group-hover/link:translate-x-0 group-hover/link:opacity-100" />
+                        <span className="truncate" title={job.org}>
+                          {job.org}
+                        </span>
+                        <ArrowUpRight className="text-muted-foreground size-3.5 shrink-0 -translate-x-1 opacity-0 transition-all duration-200 group-hover/link:translate-x-0 group-hover/link:opacity-100" />
                       </a>
                     ) : (
-                      job.org
+                      <span className="truncate" title={job.org}>
+                        {job.org}
+                      </span>
                     )}
                   </div>
                   <div className="mt-1.5 text-sm text-muted-foreground">
@@ -271,8 +275,11 @@ export default function Home() {
                   <ExperienceSummary summary={job.summary} details={job.details} />
                 </div>
               </div>
-              <time className="text-muted-foreground shrink-0 text-xs tabular-nums sm:pt-0.5">
-                {job.period}
+              <time className="text-muted-foreground shrink-0 pt-0.5 text-xs tabular-nums" title={job.period}>
+                <span className="hidden min-[420px]:inline">{job.period}</span>
+                <span className="min-[420px]:hidden">
+                  {job.period.replace(/\b\d{4}\b/g, (year) => `'${year.slice(2)}`)}
+                </span>
               </time>
             </div>
           </Reveal>
@@ -300,21 +307,28 @@ export default function Home() {
           </div>
         </Reveal>
         <Reveal delay={0.06}>
-          <div className="flex flex-wrap gap-2 sm:pl-[52px]">
+          <div className="flex gap-2 sm:pl-[52px]">
             {education.honors.map((honor, index) => {
               const cls =
-                'inline-flex items-center gap-1.5 rounded-lg border bg-background px-2.5 py-1 text-xs font-medium ring-1 ring-border/20';
-              const icon = index === 0 ? <Award className="size-3.5" /> : <Trophy className="size-3.5" />;
+                'inline-flex min-w-0 flex-1 items-center gap-1.5 rounded-lg border bg-background px-2.5 py-1 text-xs font-medium ring-1 ring-border/20';
+              const icon =
+                index === 0 ? (
+                  <Award className="size-3.5 shrink-0" />
+                ) : (
+                  <Trophy className="size-3.5 shrink-0" />
+                );
               if (!honor.url) {
                 return (
                   <span key={honor.label} className={cls}>
                     {icon}
-                    {honor.label}
+                    <span className="truncate" title={honor.label}>
+                      {honor.label}
+                    </span>
                   </span>
                 );
               }
               return (
-                <span key={honor.label} className="group relative inline-flex">
+                <span key={honor.label} className="group relative flex min-w-0 flex-1">
                   <a
                     href={honor.url}
                     target="_blank"
@@ -322,7 +336,9 @@ export default function Home() {
                     className={`${cls} transition-colors hover:border-primary/40 hover:text-foreground`}
                   >
                     {icon}
-                    {honor.label}
+                    <span className="truncate" title={honor.label}>
+                      {honor.label}
+                    </span>
                   </a>
                   <span
                     aria-hidden
