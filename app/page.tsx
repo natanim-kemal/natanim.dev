@@ -243,44 +243,47 @@ export default function Home() {
         {experience.map((job, index) => (
           <Reveal key={job.org} delay={index * 0.04}>
             <div
-              className={`flex items-start justify-between gap-3 ${
+              className={`grid grid-cols-[2.5rem_minmax(0,1fr)_auto] gap-x-3 ${
                 index < experience.length - 1 ? 'border-b border-border/70 pb-6' : ''
               }`}
             >
-              <div className="flex min-w-0 gap-3">
-                <OrgLogo logo={job.logo} mark={job.mark} org={job.org} />
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2 font-semibold leading-none">
-                    {job.url ? (
-                      <a
-                        href={job.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group/link inline-flex min-w-0 items-center gap-1.5"
-                      >
-                        <span className="truncate" title={job.org}>
-                          {job.org}
-                        </span>
-                        <ArrowUpRight className="text-muted-foreground size-3.5 shrink-0 -translate-x-1 opacity-0 transition-all duration-200 group-hover/link:translate-x-0 group-hover/link:opacity-100" />
-                      </a>
-                    ) : (
+              <OrgLogo logo={job.logo} mark={job.mark} org={job.org} />
+              <div className="min-w-0">
+                <div className="flex items-center gap-2 font-semibold leading-none">
+                  {job.url ? (
+                    <a
+                      href={job.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/link inline-flex min-w-0 items-center gap-1.5"
+                    >
                       <span className="truncate" title={job.org}>
                         {job.org}
                       </span>
-                    )}
-                  </div>
-                  <div className="mt-1.5 text-sm text-muted-foreground">
-                    {job.role} · {job.location}
-                  </div>
-                  <ExperienceSummary summary={job.summary} details={job.details} />
+                      <ArrowUpRight className="text-muted-foreground size-3.5 shrink-0 -translate-x-1 opacity-0 transition-all duration-200 group-hover/link:translate-x-0 group-hover/link:opacity-100" />
+                    </a>
+                  ) : (
+                    <span className="truncate" title={job.org}>
+                      {job.org}
+                    </span>
+                  )}
+                </div>
+                <div className="mt-1.5 text-sm text-muted-foreground">
+                  {job.role} · {job.location}
                 </div>
               </div>
-              <time className="text-muted-foreground shrink-0 pt-0.5 text-xs tabular-nums" title={job.period}>
+              <time
+                className="text-muted-foreground col-start-3 row-start-1 shrink-0 pt-0.5 text-xs tabular-nums"
+                title={job.period}
+              >
                 <span className="hidden min-[420px]:inline">{job.period}</span>
                 <span className="min-[420px]:hidden">
                   {job.period.replace(/\b\d{4}\b/g, (year) => `'${year.slice(2)}`)}
                 </span>
               </time>
+              <div className="col-start-2 col-end-4 min-w-0 sm:col-end-3">
+                <ExperienceSummary summary={job.summary} details={job.details} />
+              </div>
             </div>
           </Reveal>
         ))}
