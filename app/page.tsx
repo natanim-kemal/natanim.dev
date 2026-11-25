@@ -63,7 +63,7 @@ function SectionTitle({ index, children }: { index: string; children: ReactNode 
   return (
     <Reveal>
       <div className="flex items-baseline gap-3">
-        <span className="font-mono text-[10px] tracking-widest text-blue-500">{index}</span>
+        <span className="font-mono text-[10px] tracking-widest text-blue-700 dark:text-blue-300">{index}</span>
         <h2 className="text-xl font-bold">{children}</h2>
       </div>
     </Reveal>
@@ -295,7 +295,7 @@ export default function Home() {
                 <ArrowUpRight className="text-muted-foreground size-3.5 -translate-x-1 opacity-0 transition-all duration-200 group-hover/link:translate-x-0 group-hover/link:opacity-100" />
               </a>
               <div className="mt-1.5 text-sm text-muted-foreground">{education.degree}</div>
-              <div className="mt-0.5 text-xs text-blue-500">{education.detail}</div>
+              <div className="mt-0.5 text-xs text-blue-700 dark:text-blue-300">{education.detail}</div>
             </div>
           </div>
         </Reveal>
@@ -335,7 +335,7 @@ export default function Home() {
                   </a>
                   <span
                     aria-hidden
-                    className="pointer-events-none absolute bottom-full left-1/2 z-[60] mb-2 -translate-x-1/2 translate-y-1 scale-95 overflow-hidden rounded-xl border bg-background opacity-0 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all delay-0 duration-150 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:delay-100"
+                    className="pointer-events-none absolute bottom-full left-1/2 z-[60] mb-2 w-[150px] -translate-x-1/2 translate-y-1 scale-95 overflow-hidden rounded-xl border bg-background opacity-0 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all delay-0 duration-150 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:delay-100"
                   >
                     <Image
                       src="/google-security-badge.webp"
