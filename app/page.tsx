@@ -38,7 +38,7 @@ function UpworkLink({ className, iconOnly = false }: { className: string; iconOn
     >
       {iconOnly ? (
         <>
-          <SiUpwork className="size-4" style={{ color: '#14a800' }} />
+          <SiUpwork aria-hidden className="size-4" style={{ color: '#14a800' }} />
           <ArrowUpRight className="text-muted-foreground size-3.5" />
           <span
             aria-hidden
@@ -50,7 +50,7 @@ function UpworkLink({ className, iconOnly = false }: { className: string; iconOn
       ) : (
         <>
           Hire me on
-          <SiUpwork className="size-3.5" style={{ color: '#14a800' }} />
+          <SiUpwork aria-hidden className="size-3.5" style={{ color: '#14a800' }} />
           <ArrowUpRight className="size-4" />
         </>
       )}
@@ -88,116 +88,106 @@ export default function Home() {
       <section id="home">
         <div className="flex flex-row items-start justify-between gap-4">
           <div className="flex min-w-0 flex-col gap-4">
-            <Reveal delay={0.02}>
-              <h1 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl">
-                Hi, I&apos;m Natanim
-              </h1>
-            </Reveal>
-            <Reveal delay={0.06}>
-              <div className="bg-muted/60 inline-flex w-full max-w-full items-center justify-center gap-1.5 rounded-full px-2.5 py-1.5 text-sm sm:w-fit sm:justify-start sm:gap-2 sm:px-3">
-                <span className="relative flex size-2 shrink-0">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-60" />
-                  <span className="relative inline-flex size-2 rounded-full bg-green-500" />
-                </span>
-                <span className="group relative font-medium">
-                  {profile.location}
-                  <span className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 translate-y-1 scale-95 rounded-xl bg-primary px-4 py-2 text-sm whitespace-nowrap text-primary-foreground opacity-0 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all delay-0 duration-150 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:delay-100">
-                    UTC + 3
-                  </span>
-                </span>
-                <span className="text-muted-foreground">·</span>
-                <span className="text-muted-foreground flex items-center gap-1">
-                  <Clock3 className="hidden size-4 shrink-0 sm:block" />
-                  <span className="whitespace-nowrap">
-                    <LocalTime />
-                  </span>
-                </span>
-              </div>
-            </Reveal>
-          </div>
-          <Reveal delay={0}>
-            <span className="relative block size-20 shrink-0 overflow-hidden rounded-full border shadow-lg sm:size-28 md:size-32">
-              <Image
-                src="/ascii.webp"
-                alt="Natanim Kemal"
-                fill
-                priority
-                sizes="(min-width: 768px) 128px, (min-width: 640px) 112px, 80px"
-                className="object-cover"
-              />
-            </span>
-          </Reveal>
-        </div>
-
-        <Reveal delay={0.1} className="mt-7">
-          <p className="max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Backend, security, and product engineer. I build the systems products run on:{' '}
-            <span className="font-medium text-foreground">APIs, data, and defenses</span>, then ship
-            the interface that makes them feel simple.
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.14} className="mt-6 flex flex-wrap items-center gap-3">
-          <ContactButton className={primaryButton}>
-            Let&apos;s talk
-            <FaTelegramPlane className="size-4" />
-          </ContactButton>
-          <UpworkLink iconOnly className={secondaryButton} />
-        </Reveal>
-      </section>
-
-      <section id="about" className="flex flex-col gap-5">
-        <SectionTitle index="01">About</SectionTitle>
-        <Reveal delay={0.03}>
-          <div className="space-y-4 text-pretty leading-relaxed text-muted-foreground">
-            <p>
-              I&apos;m a software engineer based in{' '}
+            <h1 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl">
+              Hi, I&apos;m Natanim
+            </h1>
+            <div className="bg-muted/60 inline-flex w-full max-w-full items-center justify-center gap-1.5 rounded-full px-2.5 py-1.5 text-sm sm:w-fit sm:justify-start sm:gap-2 sm:px-3">
+              <span className="relative flex size-2 shrink-0">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-60" />
+                <span className="relative inline-flex size-2 rounded-full bg-green-500" />
+              </span>
               <span className="group relative font-medium">
-                Addis Ababa, Ethiopia
+                {profile.location}
                 <span className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 translate-y-1 scale-95 rounded-xl bg-primary px-4 py-2 text-sm whitespace-nowrap text-primary-foreground opacity-0 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all delay-0 duration-150 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:delay-100">
                   UTC + 3
                 </span>
               </span>
-              . BSc in software engineering from{' '}
-              <a
-                href={education.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={inlineLink}
-              >
-                Addis Ababa University
-              </a>
-              , cybersecurity major. I&apos;ve been shipping production software the whole way:
-              backend at AAU and{' '}
-              <a
-                href={experience[2].url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={inlineLink}
-              >
-                RELEX Solutions
-              </a>
-              , security operations at{' '}
-              <a
-                href={experience[1].url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={inlineLink}
-              >
-                INSA
-              </a>
-              , frontend at RDX.
-            </p>
-            <p>
-              My sweet spot is where those meet:{' '}
-              <span className="font-medium text-foreground">
-                backend systems, application security, and product engineering.
-              </span>{' '}
-              I care about clean data models, boring reliability, and interfaces people don&apos;t
-              have to think about.
-            </p>
+              <span className="text-muted-foreground">·</span>
+              <span className="text-muted-foreground flex items-center gap-1">
+                <Clock3 className="hidden size-4 shrink-0 sm:block" />
+                <span className="whitespace-nowrap">
+                  <LocalTime />
+                </span>
+              </span>
+            </div>
           </div>
-        </Reveal>
+          <span className="relative block size-20 shrink-0 overflow-hidden rounded-full border shadow-lg sm:size-28 md:size-32">
+            <Image
+              src="/ascii.webp"
+              alt="Natanim Kemal"
+              fill
+              priority
+              sizes="(min-width: 768px) 128px, (min-width: 640px) 112px, 80px"
+              className="object-cover"
+            />
+          </span>
+        </div>
+
+        <p className="mt-7 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
+          Backend, security, and product engineer. I build the systems products run on:{' '}
+          <span className="font-medium text-foreground">APIs, data, and defenses</span>, then ship
+          the interface that makes them feel simple.
+        </p>
+
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          <ContactButton className={primaryButton}>
+            Let&apos;s talk
+            <FaTelegramPlane aria-hidden className="size-4" />
+          </ContactButton>
+          <UpworkLink iconOnly className={secondaryButton} />
+        </div>
+      </section>
+
+      <section id="about" className="flex flex-col gap-5">
+        <SectionTitle index="01">About</SectionTitle>
+        <div className="space-y-4 text-pretty leading-relaxed text-muted-foreground">
+          <p>
+            I&apos;m a software engineer based in{' '}
+            <span className="group relative font-medium">
+              Addis Ababa, Ethiopia
+              <span className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 translate-y-1 scale-95 rounded-xl bg-primary px-4 py-2 text-sm whitespace-nowrap text-primary-foreground opacity-0 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all delay-0 duration-150 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:delay-100">
+                UTC + 3
+              </span>
+            </span>
+            . BSc in software engineering from{' '}
+            <a
+              href={education.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={inlineLink}
+            >
+              Addis Ababa University
+            </a>
+            , cybersecurity major. I&apos;ve been shipping production software the whole way:
+            backend at AAU and{' '}
+            <a
+              href={experience[2].url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={inlineLink}
+            >
+              RELEX Solutions
+            </a>
+            , security operations at{' '}
+            <a
+              href={experience[1].url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={inlineLink}
+            >
+              INSA
+            </a>
+            , frontend at RDX.
+          </p>
+          <p>
+            My sweet spot is where those meet:{' '}
+            <span className="font-medium text-foreground">
+              backend systems, application security, and product engineering.
+            </span>{' '}
+            I care about clean data models, boring reliability, and interfaces people don&apos;t
+            have to think about.
+          </p>
+        </div>
         <Reveal delay={0.06}>
           <Link
             href="/blog"
@@ -347,12 +337,13 @@ export default function Home() {
                     aria-hidden
                     className="pointer-events-none absolute bottom-full left-1/2 z-[60] mb-2 -translate-x-1/2 translate-y-1 scale-95 overflow-hidden rounded-xl border bg-background opacity-0 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all delay-0 duration-150 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:delay-100"
                   >
-                    <iframe
-                      tabIndex={-1}
+                    <Image
+                      src="/google-security-badge.webp"
+                      alt="Google Security Certified badge on Credly"
+                      width={150}
+                      height={150}
                       loading="lazy"
-                      title="Google Security Certified badge on Credly"
-                      src="https://www.credly.com/embedded_badge/8193a2e2-8cbd-4886-be1f-617719db6b74"
-                      className="block h-[270px] w-[150px] border-0"
+                      className="block size-[150px]"
                     />
                   </span>
                 </span>
@@ -388,7 +379,7 @@ export default function Home() {
                           className="size-3.5 object-contain"
                         />
                       ) : Icon ? (
-                        <Icon className="size-3.5" style={{ color: skillColors[item] || 'currentColor' }} />
+                        <Icon aria-hidden className="size-3.5" style={{ color: skillColors[item] || 'currentColor' }} />
                       ) : (
                         <span className="bg-muted-foreground/50 size-1.5 rounded-full" />
                       )}
@@ -486,7 +477,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className={secondaryButton}
                 >
-                  <FaLinkedinIn className="size-3.5" />
+                  <FaLinkedinIn aria-hidden className="size-3.5" />
                   LinkedIn
                 </a>
                 <UpworkLink className={secondaryButton} />
@@ -500,7 +491,7 @@ export default function Home() {
                   title="GitHub"
                   className="hover:text-foreground transition-colors"
                 >
-                  <FaGithub className="size-4" />
+                  <FaGithub aria-hidden className="size-4" />
                 </a>
                 <a
                   href={profile.x}
@@ -510,7 +501,7 @@ export default function Home() {
                   title="X"
                   className="hover:text-foreground transition-colors"
                 >
-                  <FaXTwitter className="size-4" />
+                  <FaXTwitter aria-hidden className="size-4" />
                 </a>
                 <a
                   href={profile.telegram}
@@ -520,7 +511,7 @@ export default function Home() {
                   title="Telegram"
                   className="hover:text-foreground transition-colors"
                 >
-                  <FaTelegram className="size-4" />
+                  <FaTelegram aria-hidden className="size-4" />
                 </a>
               </div>
             </div>
