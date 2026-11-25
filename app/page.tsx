@@ -332,7 +332,7 @@ export default function Home() {
                   </a>
                   <span
                     aria-hidden
-                    className="pointer-events-none absolute bottom-full left-1/2 z-[60] mb-2 w-[150px] -translate-x-1/2 translate-y-1 scale-95 overflow-hidden rounded-xl border bg-background opacity-0 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all delay-0 duration-150 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:delay-100"
+                    className="pointer-events-none absolute bottom-full left-1/2 z-[60] mb-2 w-[150px] -translate-x-1/2 translate-y-1 overflow-hidden rounded-xl border bg-background opacity-0 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all delay-0 duration-150 group-hover:translate-y-0 group-hover:opacity-100 group-hover:delay-100"
                   >
                     <Image
                       src="/google-security-badge.webp"
