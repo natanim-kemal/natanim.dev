@@ -343,7 +343,8 @@ export default function Home() {
                       width={150}
                       height={150}
                       loading="lazy"
-                      className="block size-[150px]"
+                      className="block shrink-0"
+                      style={{ width: 150, height: 150 }}
                     />
                   </span>
                 </span>
