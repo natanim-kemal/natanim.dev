@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import type { ReactNode } from 'react';
-import { ArrowUpRight, Award, Clock3, Mail, PenLine, Star, Trophy } from 'lucide-react';
+import { ArrowUpRight, Award, Clock3, Mail, MapPin, PenLine, Star, Trophy } from 'lucide-react';
 import { SiUpwork } from 'react-icons/si';
 import { FaGithub, FaLinkedinIn, FaTelegram, FaXTwitter } from 'react-icons/fa6';
 import { FaTelegramPlane } from 'react-icons/fa';
@@ -92,10 +92,7 @@ export default function Home() {
               Hi, I&apos;m Natanim
             </h1>
             <div className="bg-muted/60 inline-flex w-full max-w-full items-center justify-center gap-1.5 rounded-full px-2.5 py-1.5 text-sm sm:w-fit sm:justify-start sm:gap-2 sm:px-3">
-              <span className="relative flex size-2 shrink-0">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-60" />
-                <span className="relative inline-flex size-2 rounded-full bg-green-500" />
-              </span>
+              <MapPin aria-hidden className="size-3.5 shrink-0 text-green-500" />
               <span className="group relative font-medium">
                 {profile.location}
                 <span className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 translate-y-1 scale-95 rounded-xl bg-primary px-4 py-2 text-sm whitespace-nowrap text-primary-foreground opacity-0 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all delay-0 duration-150 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-hover:delay-100">
