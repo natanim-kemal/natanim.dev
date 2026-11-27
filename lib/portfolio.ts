@@ -198,13 +198,13 @@ export const projects: Project[] = [
     source: 'https://github.com/natanim-kemal/synce',
   },
   {
-    name: 'zentask',
+    name: 'mento',
     description:
-      'A minimalist productivity app built around deep-work sessions and flow state, with a sharp landing page to launch it.',
-    tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'PostgreSQL', 'Supabase', 'Railway'],
-    image: '/projects/zentask.webp',
-    href: 'https://zentask.natanim.dev',
-    source: 'https://github.com/natanim-kemal/zentask-site',
+      'A job hunt that runs like a system: scans the market, scores roles against your profile, tailors every resume, fills the forms, and rehearses the interview.',
+    tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Supabase', 'Vercel'],
+    image: '/projects/mento.webp',
+    href: 'https://mento.natanim.dev',
+    source: 'https://github.com/natanim-kemal/mento',
   },
   {
     name: 'akllyl',
