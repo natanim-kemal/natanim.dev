@@ -79,7 +79,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 {image ? (
                   <Image src={image} alt="" width={14} height={14} className="size-3.5 object-contain" />
                 ) : Icon ? (
-                  <Icon className="size-3.5" style={{ color: skillColors[tag] || 'currentColor' }} />
+                  <Icon aria-hidden className="size-3.5" style={{ color: skillColors[tag] || 'currentColor' }} />
                 ) : (
                   <span className="size-1.5 rounded-full bg-current" />
                 )}

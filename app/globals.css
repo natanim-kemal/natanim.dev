@@ -117,6 +117,19 @@
   -webkit-mask-image: linear-gradient(to top, black, transparent);
 }
 
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal][data-visible='true'] {
+  opacity: 1;
+  transform: none;
+}
+
 /* blog invite: pen scribbles while the underline draws itself, then restarts.
    4.65s cycle = 1.21s draw (unchanged speed) + 3s hold + 0.45s fade-out;
    pen wiggles on the same absolute schedule as before, then rests */
@@ -170,6 +183,11 @@
 
   .write-line {
     stroke-dashoffset: 0;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
   }
 }
 

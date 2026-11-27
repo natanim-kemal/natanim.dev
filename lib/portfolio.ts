@@ -35,11 +35,11 @@ export const experience: Experience[] = [
     location: 'Addis Ababa · Hybrid',
     period: 'May 2025 — Jul 2026',
     details: [
-      'Developing the PPMoS platform with a focus on server-side programming.',
-      'Optimizing database queries and API endpoints for performance.',
+      'Developed the PPMoS platform with a focus on server-side programming.',
+      'Optimized database queries and API endpoints for performance.',
     ],
     summary:
-      'Build and maintain the server side of the PPMoS platform, data models, APIs, and the workflows university staff depend on.',
+      'Built and maintained the server side of the PPMoS platform, data models, APIs, and the workflows university staff depended on.',
     url: 'https://www.aau.edu.et/',
   },
   {
